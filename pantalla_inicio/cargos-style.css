@@ -1,0 +1,47 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 67rem;
+}.cargos-disponibles-KTc {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* Estilos para cada cargo */
+.cargos > div {
+  margin-bottom: 1.5rem; 
+  width: 100%;
+  max-width: 40rem;
+  height: 5.1rem; 
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 5.1rem; 
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a9da3f;
+  border-radius: 3.1rem;
+}
+.cargos >p {
+  font-size: 2.5rem;
+}

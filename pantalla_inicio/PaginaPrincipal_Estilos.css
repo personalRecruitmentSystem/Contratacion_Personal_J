@@ -8,9 +8,10 @@ body, html {
 .todo{
     display:flex;
     height: 100%;
+    position: relative;
 }
 .mitadIzq{
-    width: 65%;
+    width: 50%;
     height: 100%;
     /* background-color: black; */
     display: flex;
@@ -68,14 +69,15 @@ body, html {
     }
 /* ---------------------------------------------------------------- */
 .mitadDer{
-    width: 35%;
+   
+    width: 50%;
     height: 100%;
-    /* background-color: brown; */
+   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative; /* Añadir posición relativa para el posicionamiento de la imagen de fondo */
+    position: relative;
 }
 
 .img__fondo2 {
@@ -87,28 +89,59 @@ body, html {
     object-fit: cover;
     z-index: -1; /* Coloca la imagen detrás de los otros elementos */
 }
+/*contenido de botones responsivo*/
     .mitadDer__Opciones{
-        margin-bottom: 100px;
-        margin-top: 100px;
-        background-color: #69f777;
-        color: black;
-        width: 230px;
-        height: 45px;
-        font-size: 25px;
-        line-height: 45px;  /* ??? */
-        text-align: center; /* ??? */
+        margin-bottom: 5vw;
+        margin-top: 5vw; 
+        background-color: rgb(87, 232, 9);
+        color: rgb(39, 30, 30);
+        width: 15vw;
+        height: 2vw;
+        font-size: 15px;
+        line-height: 2.4vw; 
+        text-align: center;
         text-decoration: none;
-        border-radius: 10px;
-        box-shadow: 3px 3px 5px rgb(0, 0, 0);
+
+        border-radius: 2vw; 
+    box-shadow: 0.6vw 0.6vw 1vw rgb(89, 185, 5); 
+
     }
 
-.menuEscondido{
-    width: 0px;
-    height: 0px;
-}
 
-.menuEscondido__mostrado{
-    width: 300px;
-    height: 500px;
-    background-color: black;
+.cargos {
+    display: none;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 50%; 
+    height: 100%; 
+    background-color: #6fd271;
+    z-index: 1; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    overflow-y: auto; 
+}
+    
+    .cargos > div {
+        margin-bottom: 1.5rem; 
+        width: 100%; 
+        max-width: 40rem; 
+        height: 5.1rem; 
+        cursor: pointer;
+        font-size: 2rem; 
+        font-weight: 500; 
+        line-height: 5.1rem;
+        color: #0a0707; 
+        font-family: Inter, 'Source Sans Pro'; 
+        white-space: nowrap; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #a9da3f; 
+        border-radius: 3.1rem; /* Borde redondeado */
+    }
+
+.cargos > p {
+    font-size: 2rem;
+
 }
