@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology</title>
+    <link rel="stylesheet" href="PaginaPrincipal_Estilos.css">
+</head>
+<body>
+    <div class="todo">
+        <div class="mitadIzq">
+            <img src="Imagenes\ezze-design-image-YsG.png" alt="" class="img__fondo">
+            <div class="mitadIzq__Titulo">
+                <div class="mitadIzq__Tiltulo__Imagen">
+                    <img src="Imagenes\streamline-ai-technology-spark-solid.png" alt="Streamline AI Technology Spark">
+                </div>
+                <div class="mitadIzq__Titulo__Nombre">
+                    Technology
+                </div>
+            </div>
+            <div class="mitadIzq__Bienvenido">
+                ¡Bienvenido a Technology!
+            </div>
+        </div>
+        <div class="mitadDer" id="div_mitadDer">
+            <img src="Imagenes\ezze-design-image-bg.png" alt="" class="img__fondo2">
+            <div class="mitadDer__Opciones" id="boton_postulante">Postulante</div>
+            <div class="mitadDer__Opciones" id="boton_lista">Lista de Usuarios</div>
+        </div>
+    </div>
+    <div class="menuEscondido" id="div_menuEscondido">
+        
+    </div>
+</body>
+
+<script>
+    const b_postulante = document.getElementById("boton_postulante");
+    const b_lista = document.getElementById("boton_lista");
+    const d_mitadDer = document.getElementById("div_mitadDer");
+    const div_menuEscondido = document.getElementById("div_menuEscondido");
+
+    b_postulante.addEventListener("click",()=>{
+        div_menuEscondido.classList.toggle("menuEscondido__mostrado");
+    });
+
+    b_lista.addEventListener("click",()=>{
+        alert("Funciona")
+    });
+
+</script>
+
+</html>
+
