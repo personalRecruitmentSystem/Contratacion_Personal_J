@@ -4,9 +4,9 @@ const d_mitadDer = document.getElementById("div_mitadDer");
 const cargos = document.querySelector(".cargos");
 
 b_postulante.addEventListener("click", () => {
-  window.location.href = "../SolicitudTrabajo.html";
+ // window.location.href = "../SolicitudTrabajo.html";
     
-  //  cargos.style.display = "block";//     d_mitadDer.classList.add("escondido");
+    cargos.style.display = "block";//     d_mitadDer.classList.add("escondido");
 });
 
 b_lista.addEventListener("click", () => {
