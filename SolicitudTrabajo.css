@@ -3,13 +3,13 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+.todo{
     display: flex;
 }
 /* ------------------------------- */
 
 .mitadIzq{
-    height: 1000px;
+    height: 1050px;
     width: 17%;
     background-color: #14333a;
     display: flex;
@@ -61,12 +61,13 @@ body{
 }
 
 .mitadDer{
-    height: 1000px;
+    height: 1050px;
     width: 83%;
     /* background-color: brown; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 30px;
 }
     .mitadDer__Solicitud{
@@ -197,7 +198,7 @@ body{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                gap: 30px;
+                gap: 10px;
                 border-right: 1px solid black;
                 border-top: 1px solid black;
             }
@@ -215,6 +216,18 @@ body{
                     width: 400px;
                     height: 60px;
                 }
+    .mitadDer__Enviar{
+        background-color: #14333a;
+        color: white;
+        width: 250px;
+        height: 150px;
+        margin-top: 22px;
+        margin-left: 100%;
+        margin-right: 21%;
+        font-size: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    }
 .cambio3{
     border-bottom: 1px solid;
 }
