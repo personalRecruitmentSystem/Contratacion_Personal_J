@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>pantalla principal</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A300%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C700"/>
+  <link rel="stylesheet" href="pantalla_principal_style.css"/>
+
+  <script src="postulante.js"></script>
+  <script src="Ctrl_postulante.js"></script>
+</head>
+
+<body>
+<div class="pantalla_principal-dTc">
+  <div class="rectangle-3-LN2">
+  </div>
+  <img class="ezze-design-image-FUz" src="../Imagenes/ezze-design-image.png"/>
+  <div class="group-3-kwY">
+    <img class="streamline-ai-technology-spark-solid-f2v" src="../Imagenes/streamline-ai-technology-spark-solid-ToL.png"/>
+    <p class="technology-mLr">technology</p>
+  </div>
+  <div class="rectangle-6-68E">lista postulantes</div>
+  <div class="rectangle-9-hNv">lista postulantes</div>
+  <div class="rectangle-10-uUz">lista postulantes</div>
+  <div class="rectangle-11-MLz">calendario</div>
+  <div class="rectangle-12-azS">lista postulantes</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      ctrl_postulante.mostrarPostulante(); 
+    });
+  </script>
+
+  <div id="contenido">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>cargo</th>
+          <th>fch postulacion</th>
+          <th>estado</th>
+        </tr>
+      </thead>
+      <tbody id="lista-postulantes"></tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

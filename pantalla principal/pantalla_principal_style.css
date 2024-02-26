@@ -1,0 +1,639 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.pantalla_principal-dTc {
+  width: 100%;
+  height: 102.4rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.pantalla_principal-dTc .rectangle-3-LN2 {
+  width: 37.8rem;
+  height: 102.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0.4rem 0.47rem rgba(94, 37, 37, 0.6000000238);
+  background-color: #13333a;
+}
+.pantalla_principal-dTc .ezze-design-image-FUz {
+  width: 38.3rem;
+  height: 103.1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  vertical-align: top;
+}
+.pantalla_principal-dTc .group-3-kwY {
+  box-sizing: border-box;
+  padding: 0.001rem 0rem 0rem 0.015rem;
+  width: 30rem;
+  height: 8.2rem;
+  position: absolute;
+  left: 1.1rem;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.pantalla_principal-dTc .group-3-kwY .streamline-ai-technology-spark-solid-f2v {
+  margin: 0rem 0.614rem 0.962rem 0rem;
+  width: 7.1706rem;
+  height: 7.2371rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.pantalla_principal-dTc .group-3-kwY .technology-mLr {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2125;
+  color: #2da0e0;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.pantalla_principal-dTc .rectangle-6-68E {
+  box-sizing: border-box;
+  padding: 1.3rem 2.3rem 2.4rem 2.3rem;
+  width: 37.8rem;
+  height: 7.4rem;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 17.3rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  background-color: #9180ff;
+}
+.pantalla_principal-dTc .rectangle-9-hNv {
+  box-sizing: border-box;
+  padding: 1.3rem 2.3rem 2.4rem 2.3rem;
+  width: 37.8rem;
+  height: 7.4rem;
+  cursor: pointer;
+  position: absolute;
+  left: 0.1rem;
+  top: 27.7rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  background-color: #9180ff;
+}
+.pantalla_principal-dTc .rectangle-10-uUz {
+  box-sizing: border-box;
+  padding: 1.3rem 2.3rem 2.4rem 2.3rem;
+  width: 37.8rem;
+  height: 7.4rem;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 39.3rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  background-color: #9180ff;
+}
+.pantalla_principal-dTc .rectangle-11-MLz {
+  box-sizing: border-box;
+  padding: 1.3rem 2.3rem 2.4rem 2.3rem;
+  width: 37.8rem;
+  height: 7.4rem;
+  cursor: pointer;
+  position: absolute;
+  left: 0.1rem;
+  top: 51.2rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  background-color: #9180ff;
+}
+.pantalla_principal-dTc .rectangle-12-azS {
+  box-sizing: border-box;
+  padding: 1.3rem 2.3rem 2.4rem 2.3rem;
+  width: 37.8rem;
+  height: 7.4rem;
+  cursor: pointer;
+  position: absolute;
+  left: 0.1rem;
+  top: 63.1rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  background-color: #9180ff;
+}
+.pantalla_principal-dTc .rectangle-7-bee {
+  width: 91.7rem;
+  height: 6.2rem;
+  position: absolute;
+  left: 39.501rem;
+  top: 27.8rem;
+  background-color: #13333a;
+}
+.pantalla_principal-dTc .lista-de-postulantes-uvE {
+  width: 27.3rem;
+  height: 3.7rem;
+  position: absolute;
+  left: 79rem;
+  top: 19.7rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .nombre-zgn {
+  width: 10.7rem;
+  height: 3.7rem;
+  position: absolute;
+  left: 42.601rem;
+  top: 29.7rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #faf1f1;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .cargo-JSa {
+  width: 8rem;
+  height: 3.7rem;
+  position: absolute;
+  left: 64.501rem;
+  top: 29.7rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #faf1f1;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .fecha-postulacion-DJe {
+  width: 24.9rem;
+  height: 3.7rem;
+  position: absolute;
+  left: 82.301rem;
+  top: 29.7rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #faf1f1;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .estado-uxA {
+  width: 9.7rem;
+  height: 3.7rem;
+  position: absolute;
+  left: 118.101rem;
+  top: 29.7rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #faf1f1;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .armando-nuez-ppE {
+  width: 14.5rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 41.101rem;
+  top: 36.7rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .jason-iuc {
+  width: 5.6rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 41.101rem;
+  top: 42.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .administracion-Esx {
+  width: 13.7rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 61.601rem;
+  top: 36.2rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .administracion-LAJ {
+  width: 13.7rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 61.701rem;
+  top: 42rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .administracion-RxS {
+  width: 13.7rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 61.801rem;
+  top: 48.8rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .administracion-Xka {
+  width: 13.7rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 61.801rem;
+  top: 54.8rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .maria-elena-EQ6 {
+  width: 10.8rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 41.101rem;
+  top: 48.3rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .elena-91G {
+  width: 5.1rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 41.101rem;
+  top: 54.1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .xx-xx-xxxx-TGr {
+  width: 9.9rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 89.301rem;
+  top: 36.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .xx-xx-xxxx-YZC {
+  width: 9.9rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 89.101rem;
+  top: 42.7rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .xx-xx-xxxx-FTc {
+  width: 9.9rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 89.401rem;
+  top: 48.9rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .xx-xx-xxxx-Ljx {
+  width: 9.9rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 89.501rem;
+  top: 55.1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .en-revision-4AA {
+  width: 10.1rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 118.101rem;
+  top: 36.9rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .entrevist-programada-Zsc {
+  width: 20rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 110.101rem;
+  top: 42.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .en-revison-UUn {
+  width: 9.7rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 118.101rem;
+  top: 48.8rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .rechazado-ywL {
+  width: 9.9rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 118.101rem;
+  top: 54.8rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.pantalla_principal-dTc .rectangle-8-tHc {
+  width: 94.6rem;
+  height: 3.7rem;
+  position: absolute;
+  left: 46.5rem;
+  top: 10.1rem;
+  background-color: #d9d9d9;
+  border-radius: 2.1rem;
+}
+.pantalla_principal-dTc .mingcute-search-line-CZC {
+  width: 4.2rem;
+  height: 3.9rem;
+  position: absolute;
+  left: 41.3rem;
+  top: 9.9rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.pantalla_principal-dTc .line-1-vEJ {
+  width: 91.702rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 39.5rem;
+  top: 34.2rem;
+  background-color: #000000;
+}
+.pantalla_principal-dTc .line-3-3Jv {
+  width: 91.702rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 39.501rem;
+  top: 46.3rem;
+  background-color: #000000;
+}
+.pantalla_principal-dTc .line-5-mki {
+  width: 91.702rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 39.501rem;
+  top: 58.6rem;
+  background-color: #000000;
+}
+.pantalla_principal-dTc .line-2-uM8 {
+  width: 91.702rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 39.501rem;
+  top: 40.3rem;
+  background-color: #000000;
+}
+.pantalla_principal-dTc .line-4-2Rk {
+  width: 91.702rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 39.501rem;
+  top: 52.6rem;
+  background-color: #000000;
+}
+.pantalla_principal-dTc .line-6-A2A {
+  width: 91.702rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 39.502rem;
+  top: 64.7rem;
+  background-color: #000000;
+}
+.pantalla_principal-dTc .line-7-6Rc {
+  width: 106.5rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 37.5rem;
+  top: 8.2rem;
+  background-color: #807676;
+}
+.pantalla_principal-dTc .group-4-2q4 {
+  width: 7.2rem;
+  height: 3.1rem;
+  cursor: pointer;
+  position: absolute;
+  left: 133.6rem;
+  top: 36.1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #f8ecec;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #13333a;
+}
+.pantalla_principal-dTc .group-5-tsG {
+  width: 7.2rem;
+  height: 3.1rem;
+  cursor: pointer;
+  position: absolute;
+  left: 133.6rem;
+  top: 42rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #f8ecec;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #13333a;
+}
+.pantalla_principal-dTc .group-6-NnS {
+  width: 7.2rem;
+  height: 3.1rem;
+  cursor: pointer;
+  position: absolute;
+  left: 133.6rem;
+  top: 48.8rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #f8ecec;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #13333a;
+}
+.pantalla_principal-dTc .group-7-fFk {
+  width: 7.2rem;
+  height: 3.1rem;
+  cursor: pointer;
+  position: absolute;
+  left: 133.6rem;
+  top: 54.7rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #f8ecec;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #13333a;
+}
+
+#contenido {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+ 
+}
+table {
+  
+  width: 60%;
+  border-top: 1px solid black;
+  border-collapse: collapse;
+  margin-top: 60px;
+  position: absolute;
+  top:100px;
+  left: 360px; 
+  max-width: 1300px; 
+  
+  background-color: #7f999d;
+  font-size: large;
+ 
+ 
+}
+
+th {
+  background-color: #07cdeb;
+  color: white;
+  border-collapse: collapse;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+  
+}
+td{
+  border-collapse: collapse;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid black;
+
+}
+
+
+/* table, th, td {
+  color: white;
+  background-color:rgba(20, 51, 58, 1);
+  
+
+
+} */
