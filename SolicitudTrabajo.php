@@ -26,7 +26,36 @@
                     </div>
                     <div class="mitadDer__Solicitud__Info__Puesto">
                         Cargo Solicitado <br>
-                        <input type="text" name="Cargo" id="" value="Administración" readonly>   
+                        <input type="text" name="Cargo" id="" value="<?php
+                            if(isset($_GET['puesto'])) {
+                                $puesto = $_GET['puesto'];
+                                
+                                // Dependiendo del valor de 'puesto', asignar el nombre del cargo
+                                switch($puesto) {
+                                    case 1:
+                                        $cargo = "Administración";
+                                        break;
+                                    case 2:
+                                        $cargo = "Secretaria";
+                                        break;
+                                    case 3:
+                                        $cargo = "Gerente";
+                                        break;
+                                    case 4:
+                                        $cargo = "RRHH";
+                                        break;
+                                    case 5:
+                                        $cargo = "Sistemas";
+                                        break;
+                                    default:
+                                        $cargo = "Cargo no especificado";
+                                }
+                            } else {
+                                // Si no se recibió la variable 'puesto', asignar un valor predeterminado
+                                $cargo = "Cargo no especificado";
+                            }
+                            echo $cargo;
+                        ?>" readonly>   
                     </div>
                 </div>
             </div>
