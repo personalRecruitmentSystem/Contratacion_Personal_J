@@ -3,13 +3,15 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+.todo{
     display: flex;
 }
 /* ------------------------------- */
-
+body{
+    background-color: white;
+}
 .mitadIzq{
-    height: 1000px;
+    height: 1050px;
     width: 17%;
     background-color: #14333a;
     display: flex;
@@ -18,7 +20,7 @@ body{
 }
     .mitadIzq__Foto{
         width: 180px;
-        height: 220px;
+        height: 242px;
         margin-top: 30px;
         border: 1px solid white;
         display: flex;
@@ -35,11 +37,19 @@ body{
             /* color: white; */
         }
         .mitadIzq__Foto__Archivo{
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            color: white;
             width: 100%;
-            height: 100%;
+            height: 22px;
             /* background-color: purple; */
         }
-
+        .mitadIzq__Foto__Imagen{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+            display: none; /* Oculta la imagen por defecto */
+        }
 
 .base_formulario{
     min-width: 250px;
@@ -61,12 +71,13 @@ body{
 }
 
 .mitadDer{
-    height: 1000px;
+    height: 1050px;
     width: 83%;
     /* background-color: brown; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 30px;
 }
     .mitadDer__Solicitud{
@@ -79,7 +90,23 @@ body{
             height: 30px;
             line-height: 30px;
             font-size: 30px;
+            display: flex;
+            flex-direction: row;
         }
+            .mitadDer__Solicitud__Titulo__Texto{
+
+            }
+            .mitadDer__Solicitud__Titulo__Volver{
+                width: 125px;
+                height: 40px;
+                margin-left: auto;
+                background-color: #14333a;
+                color: white;
+                padding-left: 9px;
+                line-height: 40px;
+                text-decoration: underline;
+                cursor: pointer;
+            }
         .mitadDer__Solicitud__Info{
             margin-top: 10px;
             margin-bottom: 10px;
@@ -133,7 +160,7 @@ body{
         }
         .mitadDer__Datos__Fila3{
             background-color: #d9d9d9;
-            height: 170px;
+            height: auto;
             border: 1px solid black;
             display: flex;
             flex-direction: row;
@@ -197,7 +224,7 @@ body{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                gap: 30px;
+                gap: 10px;
                 border-right: 1px solid black;
                 border-top: 1px solid black;
             }
@@ -215,9 +242,30 @@ body{
                     width: 400px;
                     height: 60px;
                 }
+    .mitadDer__Enviar{
+        background-color: #14333a;
+        color: white;
+        width: 250px;
+        height: 150px;
+        margin-top: 22px;
+        margin-left: 100%;
+        margin-right: 21%;
+        font-size: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    }
 .cambio3{
     border-bottom: 1px solid;
 }
 .cambio4{
     border-left: 1px solid;
+}
+.cambio5{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.cambio6{
+    display: flex;
+    flex-direction: row;
 }

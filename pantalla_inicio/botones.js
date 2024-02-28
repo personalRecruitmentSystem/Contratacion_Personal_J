@@ -6,8 +6,17 @@ const cargos = document.querySelector(".cargos");
 b_postulante.addEventListener("click", () => {
  // window.location.href = "../SolicitudTrabajo.html";
     
-    cargos.style.display = "block";//     d_mitadDer.classList.add("escondido");
+    cargos.style.display = "block";
+    document.addEventListener("click", clickOutsideHandler);
 });
 
 b_lista.addEventListener("click", () => {
 });
+
+function clickOutsideHandler(event) {
+    if (!cargos.contains(event.target) && event.target !== b_postulante) {
+        cargos.style.display = "none";
+        document.removeEventListener("click", clickOutsideHandler);
+    }
+}
+

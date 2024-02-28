@@ -96,17 +96,19 @@ body, html {
         background-color: #b5c33a;
         color: rgb(39, 30, 30);
         width: 15vw;
-        height: 2vw;
-        font-size: 15px;
-        line-height: 2.4vw; 
+        height: 35px;
+        font-size: 25px;
+        line-height: 35px; 
         text-align: center;
         text-decoration: none;
-
+        cursor: pointer;
         border-radius: 2vw; 
-    box-shadow: 0.6vw 0.6vw 1vw rgb(89, 185, 5); 
+        box-shadow: 0.6vw 0.6vw 1vw rgb(89, 185, 5); 
 
     }
-
+    #boton_postulante {
+      /* font-size: 20px; */
+    }
 
 .cargos {
     display: none;

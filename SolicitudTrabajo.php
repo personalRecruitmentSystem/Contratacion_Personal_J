@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="SolicitudTrabajo.css">
 </head>
 <body>
-
     <form id="solicitudForm" method="post" class="todo">
         <div class="mitadIzq">
             <div class="mitadIzq__Foto">
@@ -18,7 +17,10 @@
         </div>
         <div class="mitadDer">
             <div class="mitadDer__Solicitud">
-                <div class="mitadDer__Solicitud__Titulo">SOLICITUD DE EMPLEO</div>
+                <div class="mitadDer__Solicitud__Titulo">
+                    <div class="mitadDer__Solicitud__Titulo__Texto">SOLICITUD DE EMPLEO</div>
+                    <div class="mitadDer__Solicitud__Titulo__Volver" onclick="window.location.href='pantalla_inicio/PáginaPrincipal.html'">< Volver</div>
+                </div>
                 <div class="mitadDer__Solicitud__Info">
                     <div class="mitadDer__Solicitud__Info__Fecha">
                         Fecha de Postulación <br>
@@ -75,7 +77,23 @@
                     <div class="base_formulario">Dirección <input type="text" name="Direccion" id=""></div>
                 </div>
                 <div class="mitadDer__Datos__Fila3">
-                    <div class="base_formulario">Idiomas</div>
+                    <div class="base_formulario">
+                        <div>Idiomas</div>
+                        <div class="cambio6">
+                            <div class="cambio5">
+                                <label for="nivel-ingles">Inglés:</label>
+                                <input type="range" id="nivel-ingles" name="nivel-ingles" min="0" max="6" step="1">
+                                <output for="nivel-ingles" id="nivel-ingles-value">Ninguno</output>
+                            </div>
+                            <div class="cambio5">
+                                <label for="nivel-frances">Francés:</label>
+                                <input type="range" id="nivel-frances" name="nivel-frances" min="0" max="6" step="1">
+                                <output for="nivel-frances" id="nivel-frances-value">Ninguno</output>
+                            </div>
+                        </div>
+
+                        
+                    </div>
                 </div>
             </div>
             <div class="mitadDer__Resumen">
@@ -131,11 +149,53 @@
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <script>
+        //--------------------------------------------------------------------------------------
+        // IDIOMAS
+        
+        const nivelIngles = document.getElementById('nivel-ingles');
+        const nivelFrances = document.getElementById('nivel-frances');
+        const outputIngles = document.getElementById('nivel-ingles-value');
+        const outputFrances = document.getElementById('nivel-frances-value');
+
+        // Agregar eventos de cambio a los controles de rango
+        nivelIngles.addEventListener('input', function() {
+            outputIngles.textContent = convertirNivel(parseInt(this.value));
+        });
+
+        nivelFrances.addEventListener('input', function() {
+            outputFrances.textContent = convertirNivel(parseInt(this.value));
+        });
+
+        // Función para convertir el valor del rango en el nivel correspondiente
+        function convertirNivel(valor) {
+            switch (valor) {
+                case 0:
+                    return 'Ninguno';
+                case 1:
+                    return 'A1';
+                case 2:
+                    return 'A2';
+                case 3:
+                    return 'B1';
+                case 4:
+                    return 'B2';
+                case 5:
+                    return 'C1';
+                case 6:
+                    return 'C2';
+                default:
+                    return 'Ninguno';
+            }
+        }
+        //--------------------------------------------------------------------------------------
+        //FECHA
+
         document.getElementById('fecha_actual').valueAsDate = new Date();
-        // Obtener el formulario
         const form = document.getElementById('solicitudForm');
 
         // ------------------------------------------------------------------------------------------------
+        //FOTO DE PERFIL
+
         document.getElementById('inputFoto').addEventListener('change', function(event) {
         const file = event.target.files[0]; // Obtener el archivo seleccionado
         const imagenUsuario = document.getElementById('imagenUsuario');
@@ -155,7 +215,7 @@
 
 
         // ------------------------------------------------------------------------------------------------
-
+        // CAPTURA DE PANTALLA
 
         // Función para capturar la pantalla y enviarla al archivo PHP
         function captureScreen() {
