@@ -650,4 +650,38 @@ td{
   line-height: 60px;
   text-decoration: underline;
   cursor: pointer;
+  border-radius: 5px;
 }
+.todo{
+  margin-left: auto;
+  width: 930px;
+  height: 300px;
+  /* background-color: black; */
+}
+  .todo__Busqueda{
+    padding: 5px;
+    width: 250px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .BotonBuscar{
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color:white;
+    background-color: #14333a;
+    border: 1px solid #14333a;
+    border-radius: 5px;
+  }
+  .BotonLimpiar{
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color:white;
+    background-color: #14333a;
+    border: 1px solid #14333a;
+    border-radius: 5px;
+  }

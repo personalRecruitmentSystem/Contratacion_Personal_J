@@ -96,6 +96,7 @@ body{
             .mitadDer__Solicitud__Titulo__Texto{
 
             }
+            
             .mitadDer__Solicitud__Titulo__Volver{
                 width: 125px;
                 height: 40px;
@@ -106,6 +107,7 @@ body{
                 line-height: 40px;
                 text-decoration: underline;
                 cursor: pointer;
+                border-radius: 5px;
             }
         .mitadDer__Solicitud__Info{
             margin-top: 10px;

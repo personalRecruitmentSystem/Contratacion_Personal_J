@@ -44,11 +44,18 @@ $resultado = $con->query($sql);
     <div class="rectangle-12-azS">Opción 5</div>
     
     <div id="contenido">
-      <div class="mitadDer__Solicitud__Titulo__Volver" onclick="window.location.href='../pantalla_inicio/PáginaPrincipal.html'">< Volver</div>
-      <!-- <div class="busqueda">
-      <input type="text" name="busqueda" id="id_busqueda">
-      </div> -->
+      <div class="todo">
+        <div class="todo__Volver">
+          <div class="mitadDer__Solicitud__Titulo__Volver" onclick="window.location.href='../pantalla_inicio/PáginaPrincipal.html'">< Volver</div>
+        </div>
+          <input type="text" name="busqueda" id="id_busqueda" class="todo__Busqueda">
+          <button class="BotonBuscar">Buscar</button>
+          <button class="BotonLimpiar" id="limpiarBusqueda">Limpiar</button>
+      </div>
+      
+      
       <table>
+        
         <thead>
           <tr>
             <th>Nombre</th>
@@ -106,6 +113,42 @@ $resultado = $con->query($sql);
   document.addEventListener('DOMContentLoaded', function() {
     ctrl_postulante.mostrarPostulante(); 
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const botonBuscar = document.querySelector('button');
+    const inputBusqueda = document.getElementById('id_busqueda');
+
+    botonBuscar.addEventListener('click', function() {
+      const valorBusqueda = inputBusqueda.value.trim().toLowerCase();
+
+      // Filtrar las filas de la tabla según el valor de búsqueda
+      const filas = document.querySelectorAll('tbody tr');
+      filas.forEach(function(fila) {
+        const apellido = fila.querySelector('.tabla__Contenido').textContent.toLowerCase();
+        if (apellido.includes(valorBusqueda)) {
+          fila.style.display = 'table-row';
+        } else {
+          fila.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const botonLimpiar = document.getElementById('limpiarBusqueda');
+  const inputBusqueda = document.getElementById('id_busqueda');
+
+  botonLimpiar.addEventListener('click', function() {
+    // Limpiar el valor del input de búsqueda
+    inputBusqueda.value = '';
+
+    // Mostrar todas las filas de la tabla
+    const filas = document.querySelectorAll('tbody tr');
+    filas.forEach(function(fila) {
+      fila.style.display = 'table-row';
+    });
+  });
+});
 </script>
 </body>
 </html>
