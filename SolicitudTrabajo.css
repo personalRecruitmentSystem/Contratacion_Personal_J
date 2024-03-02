@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.todo{
+    display: flex;
+}
+/* ------------------------------- */
+body{
+    background-color: white;
+}
+.mitadIzq{
+    height: 1050px;
+    width: 17%;
+    background-color: #14333a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .mitadIzq__Foto{
+        width: 180px;
+        height: 242px;
+        margin-top: 30px;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+    }
+        .mitadIzq__Foto__Titulo{
+            color: white;
+            width: 100%;
+            height: 40px;
+            /* background-color: violet; */
+            text-align: center;
+            line-height: 40px;
+            font-size: 25px;
+            /* color: white; */
+        }
+        .mitadIzq__Foto__Archivo{
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            color: white;
+            width: 100%;
+            height: 22px;
+            /* background-color: purple; */
+        }
+        .mitadIzq__Foto__Imagen{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+            display: none; /* Oculta la imagen por defecto */
+        }
+
+.base_formulario{
+    min-width: 250px;
+    height: auto;
+    padding: 5px;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 20px;
+}
+.cambio1{
+    margin-left: auto;
+}
+
+.cambio2{
+    min-width: 150px;
+    width: 150px;
+}
+
+.mitadDer{
+    height: 1050px;
+    width: 83%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+    .mitadDer__Solicitud{
+        width: 100%;
+        height: auto;
+        /* background-color: cornflowerblue; */
+    }
+        .mitadDer__Solicitud__Titulo{
+            /* border: 1px solid black; */
+            height: 30px;
+            line-height: 30px;
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+            .mitadDer__Solicitud__Titulo__Texto{
+
+            }
+            
+            .mitadDer__Solicitud__Titulo__Volver{
+                width: 125px;
+                height: 40px;
+                margin-left: auto;
+                background-color: #14333a;
+                color: white;
+                padding-left: 9px;
+                line-height: 40px;
+                text-decoration: underline;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+        .mitadDer__Solicitud__Info{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: auto;
+            background-color: #d9d9d9;
+            margin-left: 1px;
+            padding: 15px;
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            border: 1px solid black;
+        }
+            .mitadDer__Solicitud__Info__Fecha{
+                font-size: 20px;
+                /* border: 1px solid black; */
+            }
+            .mitadDer__Solicitud__Info__Puesto{
+                font-size: 20px;
+                margin-left: 100px;
+                /* border: 1px solid black; */
+            }
+
+    .mitadDer__Datos{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        /* background-color: blue; */
+    }
+        .mitadDer__Datos__Titulo1{
+            width: 100%;
+            height: 40px;
+            /* border: 1px solid black; */
+            font-size: 25px;
+            line-height: 40px;
+        }
+        .mitadDer__Datos__Fila1{
+            background-color: #d9d9d9;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 10px;
+        }
+        .mitadDer__Datos__Fila2{
+            background-color: #d9d9d9;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 10px;
+        }
+        .mitadDer__Datos__Fila3{
+            background-color: #d9d9d9;
+            height: auto;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 10px;
+        }
+
+    .mitadDer__Resumen{
+        margin-top: 10px;
+        width: 100%;
+        height: 300px;
+        /* background-color: yellow; */
+        /* border: 1px solid black; */
+    }
+        .mitadDer__Resumen__Titulo{
+            width: 100%;
+            height: 40px;
+            font-size: 25px;
+            line-height: 40px;
+        }
+        .mitaDer__Resumen__Info{
+            height: 100%;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: #d9d9d9;
+
+        }
+            .resumen{
+                width: 100%;
+                height: 100%;
+                line-height: 10px;
+            }
+    .mitadDer__Experiencia{
+        margin-top: 55px;
+        width: 100%;
+        height: 500px;
+        /* background-color: yellowgreen; */
+    }
+        .mitadDer__Experiencia__Titulo{
+            width: 100%;
+            height: 40px;
+            font-size: 25px;
+            line-height: 40px;
+            
+        }
+        .mitadDer__Experiencia__Info{
+            min-width: auto;
+            min-height: auto;
+            margin-left: 0px;
+            margin-right: 0px;
+            background-color: teal;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-between;
+            background-color: #d9d9d9;
+        }
+            .mitadDer__Experiencia__Info__Base{
+                width: 50%;
+                height: 102px;
+                /* background-color: violet; */
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                border-right: 1px solid black;
+                border-top: 1px solid black;
+            }
+                .mitadDer__Experiencia__Info__Base__Fecha{
+                    margin-left: 20px;
+                }
+                .mitadDer__Experiencia__Info__Base__Texto{
+                    line-height: 20px;
+                    font-size: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                }
+                .experiencia{
+                    width: 400px;
+                    height: 60px;
+                }
+    .mitadDer__Enviar{
+        background-color: #14333a;
+        color: white;
+        width: 250px;
+        height: 150px;
+        margin-top: 22px;
+        margin-left: 100%;
+        margin-right: 21%;
+        font-size: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    }
+.cambio3{
+    border-bottom: 1px solid;
+}
+.cambio4{
+    border-left: 1px solid;
+}
+.cambio5{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.cambio6{
+    display: flex;
+    flex-direction: row;
+}

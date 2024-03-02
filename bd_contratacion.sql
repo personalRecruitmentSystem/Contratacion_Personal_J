@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
+<<<<<<< HEAD
 -- Tiempo de generación: 02-03-2024 a las 00:22:47
+=======
+-- Tiempo de generación: 28-02-2024 a las 04:51:23
+>>>>>>> 9299c02bffef70c87f1e56ca731e7cdfd3de8219
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -74,7 +78,11 @@ ALTER TABLE `postulante`
 -- AUTO_INCREMENT de la tabla `postulante`
 --
 ALTER TABLE `postulante`
+<<<<<<< HEAD
   MODIFY `ID_Postulante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+=======
+  MODIFY `ID_Postulante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+>>>>>>> 9299c02bffef70c87f1e56ca731e7cdfd3de8219
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
