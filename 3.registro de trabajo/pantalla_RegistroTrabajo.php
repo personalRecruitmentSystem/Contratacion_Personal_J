@@ -7,6 +7,8 @@ $resultado = $con->query($sql);
 ?>
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +19,7 @@ $resultado = $con->query($sql);
   <title>Listas</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A300%2C700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C700"/>
-  <link rel="stylesheet" href="pantalla_principal_Estilos.css"/>
+  <link rel="stylesheet" href="pantalla_RCargos.css"/>
 </head>
 
 <body>
@@ -30,7 +32,7 @@ $resultado = $con->query($sql);
       <div class="pantallaPrincipal__MenuIzq__Opciones">
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Lista de Postulantes</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Opción 2</div>
-        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Opción 3</div>
+        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">lista de trabajos</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Opción 4</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Opción 5</div>
       </div>
@@ -38,43 +40,50 @@ $resultado = $con->query($sql);
 
     <div class="pantallaPrincipal__ContDer">
       <div class="pantallaPrincipal__ContDer__Titulo">
-        <div class="pantallaPrincipal__ContDer__Titulo__Texto">Lista de Postulantes</div>
-        <div class="pantallaPrincipal__ContDer__Titulo__Volver" onclick="window.location.href='../PáginaPrincipal.html'">< Volver</div>
+        <div class="pantallaPrincipal__ContDer__Titulo__Texto">registro de trabajo </div>
+        <div class="pantallaPrincipal__ContDer__Titulo__Volver" onclick="window.location.href='../PáginaPrincipal.html'">  Volver</div>
       </div>
       <div class="pantallaPrincipal__ContDer__Listas">
         <div class="pantallaPrincipal__ContDer__Listas__BusqBotones">
           <input type="text" name="busqueda" id="id_busqueda" class="pantallaPrincipal__ContDer__Listas__BusqBotones__Busqueda">
           <button class="pantallaPrincipal__ContDer__Listas__BusqBotones__BotonBuscar">Buscar</button>
           <button class="pantallaPrincipal__ContDer__Listas__BusqBotones__BotonLimpiar" id="limpiarBusqueda">Limpiar</button>
+
+
+          <button class="pantalla_RCargos__ConDer__Listas__BusqBotones__BotonAgregar" id="agregarALaLista" > agregar</button>
+          <button class="pantalla_RCargos__ConDer__Listas__BusqBotones__BotonConvertirPDF" id="ConvertirPDF" > convertir a PDF</button>
+
+
+          
         </div>
-        <div class="pantallaPrincipal__ContDer__Listas__Lista">
+        <div class="pantallaPrincipal_registro_de_trabajo">
           <table>
             <thead>
+              
               <tr>
                 <th>Nombre</th>
                 <th>Cargo</th>
-                <th>Fecha de Postulación</th>
-                <th>Estado</th>
+                <th>D laborales</th>
+                <th>D feriados</th>
+                <th>D vacaciones</th>
+                <th>D no trabajados</th>
+                <th>sueldo/mensual</th>
               </tr>
+
+              
+              
             </thead>
-            <tbody>
-              <?php
-                if($resultado->num_rows > 0){
-                    while($row = $resultado->fetch_assoc()){
-                        ?>
-                        <tr>
-                        <?php
-                        echo "<th class='tabla__Contenido'>".$row["Apellidos"]."<br>".$row["Nombres"]."</th>";
-                        echo "<th class='tabla__Contenido'>".$row["Cargo a postular"]."</th>";
-                        echo "<th class='tabla__Contenido'>".$row["Fecha de postulacion"]."</th>";
-                        echo "<th class='tabla__Contenido'>".$row["Estado"]."</th>";
-                        ?>
-                        </tr>
-                        <?php
-                    }
-                }
-              ?>
-            </tbody>
+            <tr>
+              <td>juan</td>
+              <td>programador</td>
+              <td>30</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1000</td>
+              
+            </tr>
+
           </table>
         </div>
       </div>
