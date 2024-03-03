@@ -17,7 +17,7 @@ $resultado = $con->query($sql);
   <title>Listas</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A300%2C700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C700"/>
-  <link rel="stylesheet" href="pantalla_principal_Estilos.css"/>
+  <link rel="stylesheet" href="../2. Listas/pantalla_principal_Estilos.css"/>
 </head>
 
 <body>
@@ -52,7 +52,15 @@ $resultado = $con->query($sql);
             <thead>
               <tr>
                 <th>Nombre</th>
-                <th>Cargo</th>
+                <th>Cargo
+                    <br>
+                    <select name="opciones" id="opciones">
+                        <option value="desarrolo">desarrollo</option>
+                        <option value="administracion">administracion</option>
+                        <option value="marketing">marketing</option>
+                        <option value="ventas">ventas</option>
+                    </select>
+                </th>
                 <th>Fecha de Postulación</th>
                 <th>Estado</th>
               </tr>
@@ -121,6 +129,30 @@ $resultado = $con->query($sql);
       });
     });
   });
+//*********************************************************************** */
+    // esto deberia de hacer que funcione el select
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const selectOpciones = document.getElementById('opciones');
+    const filas = document.querySelectorAll('tbody tr');
+
+    selectOpciones.addEventListener('change', function() {
+      const valorSeleccionado = selectOpciones.value;
+
+      // Mostrar u ocultar las filas según el valor seleccionado
+      filas.forEach(function(fila) {
+        const cargo = fila.querySelector('.tabla__Contenido').textContent.toLowerCase();
+        if (valorSeleccionado === 'todos' || cargo.includes(valorSeleccionado)) {
+          fila.style.display = 'table-row';
+        } else {
+          fila.style.display = 'none';
+        }
+      });
+    });
+  });
+
+//**************************************************************************** */
+
   </script>
 </body>
 </html>
