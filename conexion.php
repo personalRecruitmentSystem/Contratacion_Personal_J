@@ -1,5 +1,5 @@
 <?php 
-$con =new mysqli("localhost", "root", "","bd_contratacion");
+$con =new mysqli("localhost", "root", "","cargo");
 if ($con->connect_error)
  die ("conexion fallida".$con->connect_error);
 

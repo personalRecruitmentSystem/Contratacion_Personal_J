@@ -18,7 +18,9 @@
         <div class="mitadDer">
             <div class="mitadDer__Solicitud">
                 <div class="mitadDer__Solicitud__Titulo">
-                    <div class="mitadDer__Solicitud__Titulo__Texto">SOLICITUD DE EMPLEO</div>
+                    <!-- -------------------------------------------------------------------------------------------------------------- -->
+                    <div class="mitadDer__Solicitud__Titulo__Texto">CONVOCATORIA 1-2024 | SOLICITUD DE EMPLEO</div>
+                    <!-- -------------------------------------------------------------------------------------------------------------- -->
                     <div class="mitadDer__Solicitud__Titulo__Volver" onclick="window.location.href='../PáginaPrincipal.html'">< Volver</div>
                 </div>
                 <div class="mitadDer__Solicitud__Info">
@@ -33,16 +35,16 @@
                                 $puesto = $_GET['puesto'];
                                 switch($puesto) {
                                     case 1:
-                                        $cargo = "Administración";
+                                        $cargo = "Desarrollo";
                                         break;
                                     case 2:
-                                        $cargo = "Secretaria";
-                                        break;
-                                    case 3:
                                         $cargo = "Gerente";
                                         break;
+                                    case 3:
+                                        $cargo = "Administrativo";
+                                        break;
                                     case 4:
-                                        $cargo = "RRHH";
+                                        $cargo = "Analista";
                                         break;
                                     case 5:
                                         $cargo = "Sistemas";
@@ -51,7 +53,6 @@
                                         $cargo = "Cargo no especificado";
                                 }
                             } else {
-                                // Si no se recibió la variable 'puesto', asignar un valor predeterminado
                                 $cargo = "Cargo no especificado";
                             }
                             echo $cargo;
@@ -62,127 +63,267 @@
             <div class="mitadDer__Datos">
                 <div class="mitadDer__Datos__Titulo1">Datos Personales</div>
                 <div class="mitadDer__Datos__Fila1">
-                    <div class="base_formulario">Apellidos <input type="text" name="Apellidos" id=""></div>
+                    <!-- -------------------------------------------------------------------------------------------------------------- -->
+                    <!-- <div class="base_formulario">Apellidos <input type="text" name="Apellidos" id=""></div> -->
+                    <div class="base_formulario">Apellido Paterno <input type="text" name="Apellido_Paterno" id=""></div>
+                    <div class="base_formulario">Apellido Materno <input type="text" name="Apellido_Materno" id=""></div>
+                    <!-- -------------------------------------------------------------------------------------------------------------- -->
                     <div class="base_formulario">Nombres <input type="text" name="Nombres" id=""></div>
                     <div class="base_formulario cambio1">Fecha de Nacimiento <input type="date" name="Fecha_Nacimiento" id=""></div>
-                    <div class="base_formulario">Nº de Carnet o Pasaporte <input type="number" name="CI_Pasaporte" id=""></div>
                 </div>
                 <div class="mitadDer__Datos__Fila2">
-                    <div class="base_formulario cambio2">Nacionalidad <input type="text" name="Nacionalidad" id=""></div>
+                    <!-- -------------------------------------------------------------------------------------------------------------- -->
+                    <!-- <div class="base_formulario cambio2">Nacionalidad <input type="text" name="Nacionalidad" id=""></div> -->
+                    <!-- -------------------------------------------------------------------------------------------------------------- -->
                     <div class="base_formulario cambio2">Sexo <input type="text" name="Sexo" id=""></div>
-                    <div class="base_formulario">Celular o Teléfono <input type="text" name="Celular_Telefono" id=""></div>
+                    <div class="base_formulario">Celular o Teléfono <input type="number" name="Celular_Telefono" id=""></div>
                     <div class="base_formulario cambio1">Correo <input type="text" name="Correo" id=""></div>
                     <div class="base_formulario">Dirección <input type="text" name="Direccion" id=""></div>
                 </div>
                 <div class="mitadDer__Datos__Fila3">
-                    <div class="base_formulario">
-                        <div>Idiomas</div>
-                        <div class="cambio6">
-                            <div class="cambio5">
-                                <label for="nivel-ingles">Inglés:</label>
-                                <input type="range" id="nivel-ingles" name="nivel-ingles" min="0" max="6" step="1">
-                                <output for="nivel-ingles" id="nivel-ingles-value">Ninguno</output>
-                            </div>
-                            <div class="cambio5">
-                                <label for="nivel-frances">Francés:</label>
-                                <input type="range" id="nivel-frances" name="nivel-frances" min="0" max="6" step="1">
-                                <output for="nivel-frances" id="nivel-frances-value">Ninguno</output>
-                            </div>
-                        </div>
-
-                        
+                    <!-- -------------------------------------------------------------------------------------------------------------- -->
+                    <!-- <div class="base_formulario">Nº de Carnet o Pasaporte <input type="number" name="CI_Pasaporte" id=""></div> -->
+                    <div class="base_formulario cambio7">
+                    <div>Tipo de Documento: </div>
+                    <div><input type="radio" name="tipo_documento" class="radio1" value="CI"> CI</div> 
+                    <div><input type="radio" name="tipo_documento" class="radio1" value="Pasaporte"> Pasaporte</div>
                     </div>
+                    <div class="base_formulario">Nº de Documento <input type="number" name="CI_Pasaporte" id=""></div>
                 </div>
             </div>
             <div class="mitadDer__Resumen">
-                <div class="mitadDer__Resumen__Titulo">Resumen</div>
-                <div class="mitaDer__Resumen__Info"><textarea name="descripcion" id="" cols="30" rows="10" class="resumen"></textarea><br></div>
-                
+                <div class="mitadDer__Resumen__Titulo">Formación</div>
+                <div class="mitaDer__Resumen__Info">
+                    <div class="cambio8">
+                        <div class="mostraVentanaEmergente" id="btnAgregarFormacion" onclick="mostrarVentanaEmergente()">Agregar Formación</div>
+                        <div class="mostraVentanaEmergente" id="btnLimpiarFormacion" onclick="limpiarVentanaEmergente()">Limpiar</div>
+                    </div>
+                    <!-- <button>Limpiar</button> -->
+                    <div class="mitaDer__Resumen__Info__ListaDinamica" id="listaDinamica">
+                        <div class="mitaDer__Resumen__Info__ListaDinamica__Titulo">
+                            <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__Nivel Titulo1">Nivel de Formación</div>
+                            <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__Institucion Titulo1">Instituto</div>
+                            <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__anioInicio Titulo1">Año de Inicio</div>
+                            <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__anioFin Titulo1">Año de Fin</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- Div para la ventana emergente .................º......º.........º..............º..............-->
             <div class="mitadDer__Experiencia">
                 <div class="mitadDer__Experiencia__Titulo">Experiencia</div>
                 <div class="mitadDer__Experiencia__Info">
-                <div class="mitadDer__Experiencia__Info__Base cambio4">
-                        <div class="mitadDer__Experiencia__Info__Base__Fecha">
-                            Fecha de Inicio <br>
-                            <input type="date" name="" id=""> <br>
-                            Fecha de Fin <br>
-                            <input type="date" name="" id="">
-                        </div>
-                        <div class="mitadDer__Experiencia__Info__Base__Texto">Cargo <br> <textarea name="" id="" class="experiencia"></textarea></div>
+                    <div class="cambio8">
+                        <div class="mostraVentanaEmergente" id="btnAgregarExperiencia" onclick="mostrarVentanaEmergenteExperiencia()">Agregar Formación</div>
+                        <div class="mostraVentanaEmergente" id="btnLimpiarExperiencia" onclick="limpiarVentanaEmergenteExperiencia()">Limpiar</div>
                     </div>
-                    <div class="mitadDer__Experiencia__Info__Base">
-                        <div class="mitadDer__Experiencia__Info__Base__Fecha">
-                            Fecha de Inicio <br>
-                            <input type="date" name="" id=""> <br>
-                            Fecha de Fin <br>
-                            <input type="date" name="" id="">
+                    <div class="mitadDer__Experiencia__Info__ListaDinamica" id="listaDinamicaExperiencia">
+                        <div class="mitadDer__Experiencia__Info__ListaDinamica__Titulo">
+                            <div class="mitadDer__Experiencia__Info__ListaDinamica__Elemento__Base Titulo1">Cargo</div>
+                            <div class="mitadDer__Experiencia__Info__ListaDinamica__Elemento__Base Titulo1">Descripción</div>
+                            <div class="mitadDer__Experiencia__Info__ListaDinamica__Elemento__Base Titulo1 cambio9">Fecha Inicio</div>
+                            <div class="mitadDer__Experiencia__Info__ListaDinamica__Elemento__Base Titulo1 cambio9">Fecha Fin</div>
                         </div>
-                        <div class="mitadDer__Experiencia__Info__Base__Texto">Cargo <br> <textarea name="" id="" class="experiencia"></textarea></div>
-                    </div>
-                </div>
-                <div class="mitadDer__Experiencia__Info">
-                    <div class="mitadDer__Experiencia__Info__Base cambio4 cambio3">
-                        <div class="mitadDer__Experiencia__Info__Base__Fecha">
-                            Fecha de Inicio <br>
-                            <input type="date" name="" id=""> <br>
-                            Fecha de Fin <br>
-                            <input type="date" name="" id="">
-                        </div>
-                        <div class="mitadDer__Experiencia__Info__Base__Texto">Cargo <br> <textarea name="" id="" class="experiencia"></textarea></div>
-                    </div>
-                    <div class="mitadDer__Experiencia__Info__Base cambio3">
-                        <div class="mitadDer__Experiencia__Info__Base__Fecha">
-                            Fecha de Inicio <br>
-                            <input type="date" name="" id=""> <br>
-                            Fecha de Fin <br>
-                            <input type="date" name="" id="">
-                        </div>
-                        <div class="mitadDer__Experiencia__Info__Base__Texto">Cargo <br> <textarea name="" id="" class="experiencia"></textarea></div>
+                        <!-- <div class="mitaDer__Experiencia__Info__ListaDinamica__Elemento">
+                            <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__Base">Cargo</div>
+                            <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__Base">Descripción</div>
+                            <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__Base cambio9">Fecha Inicio</div>
+                            <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__Base cambio9">Fecha Fin</div>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <input type="submit" value="Enviar" class="mitadDer__Enviar">
         </div>
+        <!-- --------------------------------------------------------------------------------------------------------------------------- -->
+        <div id="ventanaEmergente">
+            <div class="mitadDer__Datos__Fila3">    
+                <div class="base_formulario">Nivel de Educación <input type="text" name="" id="nivelEducacion"></div>
+                <div class="base_formulario">Institución <input type="text" name="" id="institucion"></div>
+                <div class="base_formulario cambio2">Año de Inicio<input type="number" id="añoInicio" min="1900" max="9999" step="1" placeholder="Año"></div>
+                <div class="base_formulario cambio2">Año de Fin<input type="number" id="añoFin" min="1900" max="9999" step="1" placeholder="Año"></div>
+            </div>
+            <div class="ventanaEmergente__Botones">
+                <div class="ventanaEmergente__Botones__Agregar" onclick="" id="btnAgregar">Agregar</div>
+                <div class="ventanaEmergente__Botones__Cerrar" onclick="cerrarVentanaEmergente()">Cerrar</div>
+            </div>
+        </div>
+
+        <!-- --------------------------------------------------------------------------------------------------------------------------- -->
+        <div id="ventanaEmergenteExperiencia">
+            <div class="mitadDer__Datos__Fila3">    
+                <div class="base_formulario">Cargo <input type="text" name="" id="cargo"></div>
+                <div class="base_formulario">Descripción <input type="text" name="" id="descripcion"></div>
+                <div class="base_formulario cambio2">Fecha de Inicio <input type="date" name="" id="fechaInicio"></div>
+                <div class="base_formulario cambio2">Fecha de Fin <input type="date" name="" id="fechaFin"></div>
+            </div>
+            <div class="ventanaEmergente__Botones">
+                <div class="ventanaEmergente__Botones__Agregar" onclick="" id="btnAgregarExperienciaExperiencia">Agregar</div>
+                <div class="ventanaEmergente__Botones__Cerrar" onclick="cerrarVentanaEmergenteExperiencia()">Cerrar</div>
+            </div>
+        </div>
+        <!-- --------------------------------------------------------------------------------------------------------------------------- -->
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <script>
         //--------------------------------------------------------------------------------------
-        // IDIOMAS
-        
-        const nivelIngles = document.getElementById('nivel-ingles');
-        const nivelFrances = document.getElementById('nivel-frances');
-        const outputIngles = document.getElementById('nivel-ingles-value');
-        const outputFrances = document.getElementById('nivel-frances-value');
+        // BOTON AGREGAR FORMACIÓN
+        // Declarar un array para almacenar todas las filas
+        var filasParaGuardar = [];
+        // Agregar evento de click al botón "Agregar" fuera de la función mostrarVentanaEmergente
+        document.getElementById("btnAgregar").addEventListener("click", function() {
+            // Obtener los valores de los inputs
+            var nivelEducacion = document.getElementById("nivelEducacion").value;
+            var institucion = document.getElementById("institucion").value;
+            var añoInicio = document.getElementById("añoInicio").value;
+            var añoFin = document.getElementById("añoFin").value;
 
-        // Agregar eventos de cambio a los controles de rango
-        nivelIngles.addEventListener('input', function() {
-            outputIngles.textContent = convertirNivel(parseInt(this.value));
+            // Crear un objeto con los datos de la fila
+            var nuevaFila = {
+                nivelEducacion: nivelEducacion,
+                institucion: institucion,
+                añoInicio: añoInicio,
+                añoFin: añoFin
+            };
+
+            // Agregar la nueva fila al array
+            filasParaGuardar.push(nuevaFila);
+
+            // Obtener el contenedor de la lista dinámica
+            var listaDinamica = document.getElementById("listaDinamica");
+
+            // Crear un nuevo elemento div para almacenar los datos
+            var nuevoElemento = document.createElement("div");
+            nuevoElemento.classList.add("mitaDer__Resumen__Info__ListaDinamica__Elemento");
+
+            // Agregar los datos al nuevo elemento
+            nuevoElemento.innerHTML = `
+                <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__Nivel">${nivelEducacion}</div>
+                <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__Institucion">${institucion}</div>
+                <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__anioInicio">${añoInicio}</div>
+                <div class="mitaDer__Resumen__Info__ListaDinamica__Elemento__anioFin">${añoFin}</div>
+            `;
+
+            // Agregar el nuevo elemento a la lista dinámica
+            listaDinamica.appendChild(nuevoElemento);
+
+            // Limpiar los inputs
+            document.getElementById("nivelEducacion").value = "";
+            document.getElementById("institucion").value = "";
+            document.getElementById("añoInicio").value = "";
+            document.getElementById("añoFin").value = "";
+
+            // Cerrar la ventana emergente
+            cerrarVentanaEmergente();
         });
 
-        nivelFrances.addEventListener('input', function() {
-            outputFrances.textContent = convertirNivel(parseInt(this.value));
+        function mostrarVentanaEmergente () {
+            var ventanaEmergente = document.getElementById("ventanaEmergente");
+            ventanaEmergente.style.display = "block";
+        }
+
+        // Función para cerrar la ventana emergente
+        function cerrarVentanaEmergente() {
+            var ventanaEmergente = document.getElementById("ventanaEmergente");
+            ventanaEmergente.style.display = "none";
+        }
+        // -------------------------------------------------------------------------------
+        // BOTON LIMPIAR DE FORMACIÓN
+        // Función para limpiar la ventana emergente y el arreglo de datos
+        function limpiarVentanaEmergente() {
+            // Limpiar el arreglo de datos
+            filasParaGuardar = [];
+
+            // Obtener el contenedor de la lista dinámica
+            var listaDinamica = document.getElementById("listaDinamica");
+
+            // Eliminar todos los elementos hijos excepto el primero del contenedor
+            while (listaDinamica.children.length > 1) {
+                listaDinamica.removeChild(listaDinamica.lastChild);
+            }
+        }
+
+        // Función para cerrar la ventana emergente
+        function cerrarVentanaEmergente() {
+            var ventanaEmergente = document.getElementById("ventanaEmergente");
+            ventanaEmergente.style.display = "none";
+        }
+
+        //--------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------
+        // BOTON AGREGAR EXPERIENCIA
+        // Declarar un array para almacenar todas las filas de experiencia
+        var experienciasParaGuardar = [];
+        // Agregar evento de click al botón "Agregar" fuera de la función mostrarVentanaEmergenteExperiencia
+        document.getElementById("btnAgregarExperienciaExperiencia").addEventListener("click", function() {
+            // Obtener los valores de los inputs de experiencia
+            var cargo = document.getElementById("cargo").value;
+            var descripcion = document.getElementById("descripcion").value;
+            var fechaInicio = document.getElementById("fechaInicio").value;
+            var fechaFin = document.getElementById("fechaFin").value;
+
+            // Crear un objeto con los datos de la fila de experiencia
+            var nuevaExperiencia = {
+                cargo: cargo,
+                descripcion: descripcion,
+                fechaInicio: fechaInicio,
+                fechaFin: fechaFin
+            };
+
+            // Agregar la nueva fila de experiencia al array
+            experienciasParaGuardar.push(nuevaExperiencia);
+
+            // Obtener el contenedor de la lista dinámica de experiencia
+            var listaDinamicaExperiencia = document.getElementById("listaDinamicaExperiencia");
+
+            // Crear un nuevo elemento div para almacenar los datos de la experiencia
+            var nuevoElementoExperiencia = document.createElement("div");
+            nuevoElementoExperiencia.classList.add("mitaDer__Experiencia__Info__ListaDinamica__Elemento");
+
+            // Agregar los datos al nuevo elemento de experiencia
+            nuevoElementoExperiencia.innerHTML = `
+                <div class="mitadDer__Experiencia__Info__ListaDinamica__Elemento__Base">${cargo}</div>
+                <div class="mitadDer__Experiencia__Info__ListaDinamica__Elemento__Base">${descripcion}</div>
+                <div class="mitadDer__Experiencia__Info__ListaDinamica__Elemento__Base cambio9">${fechaInicio}</div>
+                <div class="mitadDer__Experiencia__Info__ListaDinamica__Elemento__Base cambio9">${fechaFin}</div>
+            `;
+
+            // Agregar el nuevo elemento de experiencia a la lista dinámica de experiencia
+            listaDinamicaExperiencia.appendChild(nuevoElementoExperiencia);
+
+            // Limpiar los inputs de experiencia
+            document.getElementById("cargo").value = "";
+            document.getElementById("descripcion").value = "";
+            document.getElementById("fechaInicio").value = "";
+            document.getElementById("fechaFin").value = "";
+
+            // Cerrar la ventana emergente de experiencia
+            cerrarVentanaEmergenteExperiencia();
         });
 
-        // Función para convertir el valor del rango en el nivel correspondiente
-        function convertirNivel(valor) {
-            switch (valor) {
-                case 0:
-                    return 'Ninguno';
-                case 1:
-                    return 'A1';
-                case 2:
-                    return 'A2';
-                case 3:
-                    return 'B1';
-                case 4:
-                    return 'B2';
-                case 5:
-                    return 'C1';
-                case 6:
-                    return 'C2';
-                default:
-                    return 'Ninguno';
+        function mostrarVentanaEmergenteExperiencia () {
+            var ventanaEmergenteExperiencia = document.getElementById("ventanaEmergenteExperiencia");
+            ventanaEmergenteExperiencia.style.display = "block";
+        }
+
+        // Función para cerrar la ventana emergente de experiencia
+        function cerrarVentanaEmergenteExperiencia() {
+            var ventanaEmergenteExperiencia = document.getElementById("ventanaEmergenteExperiencia");
+            ventanaEmergenteExperiencia.style.display = "none";
+        }
+
+        // BOTON LIMPIAR DE EXPERIENCIA
+        // Función para limpiar la ventana emergente de experiencia y el arreglo de datos de experiencia
+        function limpiarVentanaEmergenteExperiencia() {
+            // Limpiar el arreglo de datos de experiencia
+            experienciasParaGuardar = [];
+
+            // Obtener el contenedor de la lista dinámica de experiencia
+            var listaDinamicaExperiencia = document.getElementById("listaDinamicaExperiencia");
+
+            // Eliminar todos los elementos hijos excepto el primero del contenedor de experiencia
+            while (listaDinamicaExperiencia.children.length > 1) {
+                listaDinamicaExperiencia.removeChild(listaDinamicaExperiencia.lastChild);
             }
         }
         //--------------------------------------------------------------------------------------
@@ -213,16 +354,35 @@
 
 
         // ------------------------------------------------------------------------------------------------
-        // CAPTURA DE PANTALLA
+        // Agregar un evento de escucha para el envío del formulario
+        form.addEventListener('submit', function(event) {
+            // Prevenir el envío del formulario
+            event.preventDefault();
 
-        // Función para capturar la pantalla y enviarla al archivo PHP
-        function captureScreen() {
-            html2canvas(document.body).then(function(canvas) {
-                var imgData = canvas.toDataURL('image/png');
+            // Mostrar una confirmación al usuario
+            const confirmacion = confirm("Revise si su información es correcta. ¿Está seguro que quiere postularse?");
 
-                // Crear un objeto FormData con los datos del formulario y la captura de pantalla
+            // Si el usuario confirma
+            if (confirmacion) {
+                // Crear un objeto FormData con los datos del formulario
                 var formData = new FormData(document.getElementById('solicitudForm'));
-                formData.append('screenshot', imgData);
+                
+                // Agregar los datos de las filas al objeto FormData
+                for (var i = 0; i < filasParaGuardar.length; i++) {
+                    var fila = filasParaGuardar[i];
+                    formData.append('nivelEducacion[]', fila.nivelEducacion);
+                    formData.append('institucion[]', fila.institucion);
+                    formData.append('anio_inicio1[]', fila.añoInicio);
+                    formData.append('anio_fin1[]', fila.añoFin);
+                }
+                // Agregar los datos de las filas de experiencia al objeto FormData
+                for (var i = 0; i < experienciasParaGuardar.length; i++) {
+                    var experiencia = experienciasParaGuardar[i];
+                    formData.append('cargo1[]', experiencia.cargo);
+                    formData.append('descripcion1[]', experiencia.descripcion);
+                    formData.append('fechaInicio1[]', experiencia.fechaInicio);
+                    formData.append('fechaFin1[]', experiencia.fechaFin);
+                }
 
                 // Crear una instancia de XMLHttpRequest para enviar los datos a PHP
                 var xhr = new XMLHttpRequest();
@@ -238,28 +398,8 @@
                         alert("Error al guardar los datos.");
                     }
                 };
-            }).catch(function(error) {
-                console.error('Error al capturar la pantalla:', error);
-            });
-        }
-
-
-        // Agregar un evento de escucha para el envío del formulario
-        form.addEventListener('submit', function(event) {
-            // Prevenir el envío del formulario
-            event.preventDefault();
-
-            // Mostrar una confirmación al usuario
-            const confirmacion = confirm("Revise si su información es correcta. ¿Está seguro que quiere postularse?");
-
-            // Si el usuario confirma
-            if (confirmacion) {
-                // Capturar la pantalla y enviarla al archivo PHP
-                captureScreen();
             }
         });
-
-
     </script>
 </body>
 </html>
