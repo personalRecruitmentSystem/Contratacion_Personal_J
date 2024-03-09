@@ -25,7 +25,7 @@
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Opción 5</div>
     </div>
   </div>
-  <div class="pantallaPrincipal__ContDer">
+  <div class="pantallaPrincipal__ContDer"  id="generarPDF_deEsto">
     <div class="pantallaPrincipal__ContDer__Titulo">
       <div class="pantallaPrincipal__ContDer__Titulo__Texto">Lista de Vacantes </div>
       <div class="pantallaPrincipal__ContDer__Titulo__Volver" onclick="window.location.href='../PáginaPrincipal.php'"><  Volver</div>
@@ -66,13 +66,37 @@
     </table>
   </div>
   <!--generar pdf-->
-  <div  class="pantallaPrincipal__ContDer__Titulo__Volver cambio1">
+  <div  class="pantallaPrincipal__ContDer__Titulo__Volver cambio1" id="crearPDF">
     Generar Reporte PDF
     <!-- <a href="" class="btn_pdf" ><i class="pantallaPrincipal__ContDer__Titulo__Volver"></i></a> -->
   </div>
 </div>
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
+<!-- <script src="html2pdf.bundle.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js" integrity="sha512-234m/ySxaBP6BRdJ4g7jYG7uI9y2E74dvMua1JzkqM3LyWP43tosIqET873f3m6OQ/0N6TKyqXG4fLeHN9vKkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="jspdf.plugin.autotable.min.js"></script>
+  <script>
+    const botonGenerarPDF = document.getElementById('crearPDF');
+
+    botonGenerarPDF.addEventListener('click', () => {
+      const doc = new jsPDF();
+      doc.text('Lista de Vacantes', 10, 10);
+      
+      const elementoTabla = document.getElementById('generarPDF_deEsto');
+      doc.autoTable({ html: elementoTabla });
+      
+      doc.save('documento.pdf');
+    });
+  </script>
+
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
 <script>
+// -------------------------------------------------------------------------------------
+// Generar PDF
+
+// -------------------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', function() {
     ctrl_listavacante.mostrarListaVacante(); 
   });

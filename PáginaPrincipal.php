@@ -101,9 +101,9 @@
       <p class="cargos__Titulo__Texto">Cargos Disponibles</p>
     </div>
     <div class="cargos__Botones">
-    <div class="cargos__BotonIzq" onclick="window.location.href='1. Formulario de Postulante/SolicitudTrabajo.php?puesto=1'">Desarrollo</div>
+    <div class="cargos__BotonIzq" onclick="window.location.href='1. Formulario de Postulante/SolicitudTrabajo.php?puesto=1&conv=1'">Desarrollo</div>
 
-      <div class="cargos__BotonDer" onclick="window.location.href='1. Formulario de Postulante/SolicitudTrabajo.php?puesto=2'">Gerente</div>
+      <div class="cargos__BotonDer" onclick="window.location.href='1. Formulario de Postulante/SolicitudTrabajo.php?puesto=2&conv=1'">Gerente</div>
     <!-- Aquí se mostrarán los ID_Cargo asociados a la convocatoria seleccionada -->
     </div>
   </div>
@@ -157,34 +157,33 @@
             intercalar=1;
           }
           // Asignar el nombre del cargo basado en el número
-          // Asignar el nombre del cargo basado en el número
           switch(cargoNumero) {
             case 1:
                 div.innerText = "Desarrollo";
                 // Agregar evento de clic para redirigir al formulario con el parámetro adecuado
                 div.addEventListener('click', function() {
-                    window.location.href = '1. Formulario de Postulante/SolicitudTrabajo.php?puesto=1';
+                    window.location.href = '1. Formulario de Postulante/SolicitudTrabajo.php?puesto=1&conv=' + numConvocatoria;
                 });
                 break;
             case 2:
                 div.innerText = "Gerente";
                 // Agregar evento de clic para redirigir al formulario con el parámetro adecuado
                 div.addEventListener('click', function() {
-                    window.location.href = '1. Formulario de Postulante/SolicitudTrabajo.php?puesto=2';
+                    window.location.href = '1. Formulario de Postulante/SolicitudTrabajo.php?puesto=2&conv=' + numConvocatoria;
                 });
                 break;
             case 3:
                 div.innerText = "Administrativo";
                 // Agregar evento de clic para redirigir al formulario con el parámetro adecuado
                 div.addEventListener('click', function() {
-                    window.location.href = '1. Formulario de Postulante/SolicitudTrabajo.php?puesto=3';
+                    window.location.href = '1. Formulario de Postulante/SolicitudTrabajo.php?puesto=3&conv=' + numConvocatoria;
                 });
                 break;
             case 4:
                 div.innerText = "Analista";
                 // Agregar evento de clic para redirigir al formulario con el parámetro adecuado
                 div.addEventListener('click', function() {
-                    window.location.href = '1. Formulario de Postulante/SolicitudTrabajo.php?puesto=4';
+                    window.location.href = '1. Formulario de Postulante/SolicitudTrabajo.php?puesto=4&conv=' + numConvocatoria;
                 });
                 break;
             default:

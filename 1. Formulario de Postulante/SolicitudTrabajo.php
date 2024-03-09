@@ -1,3 +1,26 @@
+<?php
+$conv = isset($_GET['conv']) ? intval($_GET['conv']) : 0;
+
+$convocatoriaTexto = '';
+switch ($conv) {
+    case 1:
+        $convocatoriaTexto = 'CONVOCATORIA 04-2023';
+        break;
+    case 2:
+        $convocatoriaTexto = 'CONVOCATORIA 07-2023';
+        break;
+    case 3:
+        $convocatoriaTexto = 'CONVOCATORIA 11-2023';
+        break;
+    case 4:
+        $convocatoriaTexto = 'CONVOCATORIA 03-2024';
+        break;
+    default:
+        $convocatoriaTexto = 'Convocatoria Desconocida';
+        break;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +42,10 @@
             <div class="mitadDer__Solicitud">
                 <div class="mitadDer__Solicitud__Titulo">
                     <!-- -------------------------------------------------------------------------------------------------------------- -->
-                    <div class="mitadDer__Solicitud__Titulo__Texto">CONVOCATORIA 1-2024 | SOLICITUD DE EMPLEO</div>
+                    <div class="mitadDer__Solicitud__Titulo__Texto"><?php echo $convocatoriaTexto; ?> | SOLICITUD DE EMPLEO</div>
+                    
                     <!-- -------------------------------------------------------------------------------------------------------------- -->
-                    <div class="mitadDer__Solicitud__Titulo__Volver" onclick="window.location.href='../PáginaPrincipal.html'">< Volver</div>
+                    <div class="mitadDer__Solicitud__Titulo__Volver" onclick="window.location.href='../PáginaPrincipal.php'">< Volver</div>
                 </div>
                 <div class="mitadDer__Solicitud__Info">
                     <div class="mitadDer__Solicitud__Info__Fecha">
