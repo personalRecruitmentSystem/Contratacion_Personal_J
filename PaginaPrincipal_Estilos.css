@@ -168,7 +168,7 @@ font-family: Inter, 'Source Sans Pro';
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: #14333a;
+background-color: rgba(142, 104, 216, 1);
 color: white;
 border-radius: 3.1rem;
 }
@@ -184,7 +184,7 @@ font-family: Inter, 'Source Sans Pro';
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: #14333a;
+background-color: rgba(142, 104, 216, 1);
 color: white;
 border-radius: 3.1rem;
 }
