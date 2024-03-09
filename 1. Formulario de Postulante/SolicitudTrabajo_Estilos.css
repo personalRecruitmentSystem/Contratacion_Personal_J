@@ -13,7 +13,7 @@ body{
 .mitadIzq{
     height: auto;
     width: 17%;
-    background-color: #14333a;
+    background-color: rgba(142, 104, 216, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,7 +103,7 @@ body{
                 width: 125px;
                 height: 40px;
                 margin-left: auto;
-                background-color: #14333a;
+                background-color: rgba(142, 104, 216, 1);
                 color: white;
                 padding-left: 9px;
                 line-height: 40px;
@@ -283,7 +283,7 @@ body{
                         border: 2px solid black;
                     }
     .mitadDer__Enviar{
-        background-color: #14333a;
+        background-color: rgba(142, 104, 216, 1);
         color: white;
         width: 150px;
         height: 50px;
@@ -324,7 +324,7 @@ body{
 .mostraVentanaEmergente{
     width: 145px;
     height: 40px;
-    background-color: #14333a;
+    background-color: rgba(142, 104, 216, 1);
     color: white;
     padding-left: 9px;
     line-height: 40px;
@@ -353,7 +353,7 @@ body{
         .ventanaEmergente__Botones__Cerrar{
             width: 60px;
             height: 40px;
-            background-color: #14333a;
+            background-color: rgba(142, 104, 216, 1);
             color: white;
             padding-left: 9px;
             line-height: 40px;
@@ -365,7 +365,7 @@ body{
         .ventanaEmergente__Botones__Agregar{
             width: 70px;
             height: 40px;
-            background-color: #14333a;
+            background-color: rgba(142, 104, 216, 1);
             color: white;
             padding-left: 9px;
             line-height: 40px;
@@ -386,8 +386,8 @@ body{
 }
 
 .Titulo1{
-    background-color: #14333a;
-    color: white;
+    background-color: rgba(245, 228, 253, 1);
+    color: black;
 }
 .cambio8{
     display: flex;

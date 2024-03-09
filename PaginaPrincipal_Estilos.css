@@ -1,209 +1,209 @@
 *{
-    box-sizing: border-box;
-    margin: 0px;
+  box-sizing: border-box;
+  margin: 0px;
 }
 body, html {
-    height: 100%;
+  height: 100%;
 }
 .todo{
-    display:flex;
-    height: 100%;
-    position: relative;
+  display:flex;
+  height: 100%;
+  position: relative;
 }
 .mitadIzq{
-    width: 50%;
-    height: 100%;
-    /* background-color: black; */
-    display: flex;
-    flex-direction: column; /* ??? */
-    align-items: center; /* ??? */
+  width: 50%;
+  height: 100%;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column; /* ??? */
+  align-items: center; /* ??? */
 }
 .img__fondo {
-    position: absolute;
-    width: 65%;
-    height: 100%;
-    object-fit: cover; /* ??? */
-    z-index: -1; /* ??? */
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  object-fit: cover; /* ??? */
+  z-index: -1; /* ??? */
 }
-    .mitadIzq__Titulo{
-        width: 550px;
-        height: 150px;
-        /* background-color: violet; */
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25%;
-        padding-left: 20px;
-        display: flex;
-    }
-        .mitadIzq__Tiltulo__Imagen{
-            width: 150px;
-            height: auto;
-            /* background-color: aquamarine; */
-            overflow: hidden; /* ??? */
-        }
+  .mitadIzq__Titulo{
+      width: 550px;
+      height: 150px;
+      /* background-color: violet; */
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 25%;
+      padding-left: 20px;
+      display: flex;
+  }
+      .mitadIzq__Tiltulo__Imagen{
+          width: 150px;
+          height: auto;
+          /* background-color: aquamarine; */
+          overflow: hidden; /* ??? */
+      }
 
-        .mitadIzq__Tiltulo__Imagen img {
-            width: 100%; 
-            height: 100%;
-            object-fit: cover; /* ??? */
-        }
+      .mitadIzq__Tiltulo__Imagen img {
+          width: 100%; 
+          height: 100%;
+          object-fit: cover; /* ??? */
+      }
 
-        .mitadIzq__Titulo__Nombre{
-            width: 70%;
-            height: auto;
-            color:#2ea0e0;
-            /* background-color: cornflowerblue; */
-            padding-left: 30px;
-            padding-top: 10%;
-            font-size: 70px;
-            -webkit-text-stroke: 0.3px white;
-        }
+      .mitadIzq__Titulo__Nombre{
+          width: 70%;
+          height: auto;
+          color:#2ea0e0;
+          /* background-color: cornflowerblue; */
+          padding-left: 30px;
+          padding-top: 10%;
+          font-size: 70px;
+          -webkit-text-stroke: 0.3px white;
+      }
 
-    .mitadIzq__Bienvenido{
-        /* background-color: black; */
-        color: rgb(242, 240, 254);
-        display: inline-block; /* ??? */
-        margin-top: 70px;
-        font-size: 60px;
-        -webkit-text-stroke: 0.4px black;
-    }
+  .mitadIzq__Bienvenido{
+      /* background-color: black; */
+      color: rgb(242, 240, 254);
+      display: inline-block; /* ??? */
+      margin-top: 70px;
+      font-size: 60px;
+      -webkit-text-stroke: 0.4px black;
+  }
 /* ---------------------------------------------------------------- */
 .mitadDer{
-   
-    width: 50%;
-    height: 100%;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+ 
+  width: 50%;
+  height: 100%;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .img__fondo2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Coloca la imagen detrás de los otros elementos */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Coloca la imagen detrás de los otros elementos */
 }
 /*contenido de botones responsivo*/
-    .mitadDer__Opciones{
-        margin-bottom: 5vw;
-        margin-top: 5vw; 
-        background-color: #14333a;
-        color: white;
-        /* color: rgb(39, 30, 30); */
-        width: 15vw;
-        height: 35px;
-        font-size: 25px;
-        line-height: 35px; 
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        border-radius: 2vw; 
-        box-shadow: 0.6vw 0.6vw 1vw #1a7286; 
+  .mitadDer__Opciones{
+      margin-bottom: 5vw;
+      margin-top: 5vw; 
+      background-color:rgba(142, 104, 216, 1);
+      color: white;
+      /* color: rgb(39, 30, 30); */
+      width: 15vw;
+      height: 35px;
+      font-size: 25px;
+      line-height: 35px; 
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 2vw; 
+      box-shadow: 0.6vw 0.6vw 1vw #1a7286; 
 
-    }
-    #boton_postulante {
-      /* font-size: 20px; */
-    }
+  }
+  #boton_postulante {
+    /* font-size: 20px; */
+  }
 
 /* ------------------------------------------------------------ */
 
 .cargos {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  /* box-sizing: border-box; */
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  /* background-color: #ffffff; */
-  z-index: 1;
-  /* box-sizing: border-box; */
-  overflow-y: auto;
-  background-color: #ebfafd;
-  /* background-color: black; */
+display: none;
+position: fixed;
+top: 0;
+right: 0;
+width: 50%;
+height: 100%;
+/* box-sizing: border-box; */
+padding: 20px;
+display: flex;
+align-items: center;
+flex-direction: column;
+/* background-color: #ffffff; */
+z-index: 1;
+/* box-sizing: border-box; */
+overflow-y: auto;
+background-color: #ebfafd;
+/* background-color: black; */
 }
 .cargos__Titulo{
-  width: 100%;
-  height: auto;
-  /* background-color: red; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 5px rgb(40, 40, 139) solid;
+width: 100%;
+height: auto;
+/* background-color: red; */
+display: flex;
+flex-direction: column;
+align-items: center;
+border-bottom: 5px rgb(40, 40, 139) solid;
 }
 .cargos__Titulo__Select{
-  
+
 }
 
 .cargos__Titulo__Texto {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 1.2125;
-  color: #000000;
-  font-family: Inter, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
+margin-left: auto;
+margin-right: auto;
+font-size: 3.5rem;
+font-weight: 500;
+line-height: 1.2125;
+color: #000000;
+font-family: Inter, 'Source Sans Pro';
+white-space: nowrap;
+flex-shrink: 0;
 }
 .cargos__BotonIzq {
-  margin-right: auto;
-  width: 310px;
-  height: 60px; 
-  cursor: pointer;
-  font-size: 40px;
-  line-height: 1.2px;
-  color: #000000;
-  font-family: Inter, 'Source Sans Pro';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #14333a;
-  color: white;
-  border-radius: 3.1rem;
+margin-right: auto;
+width: 310px;
+height: 60px; 
+cursor: pointer;
+font-size: 40px;
+line-height: 1.2px;
+color: #000000;
+font-family: Inter, 'Source Sans Pro';
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #14333a;
+color: white;
+border-radius: 3.1rem;
 }
 .cargos__BotonDer {
-  margin-left: auto;
-  width: 310px;
-  height: 60px; 
-  cursor: pointer;
-  font-size: 40px;
-  line-height: 1.2px;
-  color: #000000;
-  font-family: Inter, 'Source Sans Pro';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #14333a;
-  color: white;
-  border-radius: 3.1rem;
+margin-left: auto;
+width: 310px;
+height: 60px; 
+cursor: pointer;
+font-size: 40px;
+line-height: 1.2px;
+color: #000000;
+font-family: Inter, 'Source Sans Pro';
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #14333a;
+color: white;
+border-radius: 3.1rem;
 }
 
 .cargos__Botones{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  /* background-color: purple; */
+margin-left: auto;
+margin-right: auto;
+margin-top: 30px;
+width: 600px;
+display: flex;
+flex-direction: column;
+gap: 40px;
+/* background-color: purple; */
 }
 
 
 select{
-  width: auto;
-  /* height: 200px !important; */
-  font-size: 25px;
-  margin-bottom: 20px;
+width: auto;
+/* height: 200px !important; */
+font-size: 25px;
+margin-bottom: 20px;
 }

@@ -114,7 +114,7 @@ body {
         height: 60px;
         /* border: 2px solid skyblue; */
         margin-left: auto;
-        background-color: #14333a;
+        background-color: rgba(142, 104, 216, 1);
         color: white;
         font-size: 30px;
         padding-left: 9px;
@@ -155,8 +155,8 @@ body {
           height: 40px;
           font-size: 16px;
           color:white;
-          background-color: #14333a;
-          border: 1px solid #14333a;
+          background-color: rgba(142, 104, 216, 1);
+          border: 1px solid rgba(142, 104, 216, 1);
           border-radius: 5px;
         }
         .pantallaPrincipal__ContDer__Listas__BusqBotones__BotonLimpiar{
@@ -164,8 +164,8 @@ body {
           height: 40px;
           font-size: 16px;
           color:white;
-          background-color: #14333a;
-          border: 1px solid #14333a;
+          background-color: rgba(142, 104, 216, 1);
+          border: 1px solid rgba(142, 104, 216, 1);
           border-radius: 5px;
         }
       .pantallaPrincipal__ContDer__Listas__Lista{
@@ -190,7 +190,7 @@ table {
 }
 
 th {
-  background-color: #07cdeb;
+  background-color: rgba(131, 112, 255, 1);
   color: white;
   border-collapse: collapse;
   width: 50px;
@@ -212,7 +212,7 @@ td{
 
 }
 .tabla__Contenido{
-  background-color: #7f999d;
+  background-color:rgba(245, 228, 253, 1);
   font-size: large;
   color: black;
   border-left: 1px solid black;
@@ -234,8 +234,8 @@ td{
   padding-right: 10px;
   font-size: 16px;
   color:white;
-  background-color: #14333a;
-  border: 1px solid #14333a;
+  background-color: rgba(142, 104, 216, 1);
+  border: 1px solid rgba(142, 104, 216, 1);
   border-radius: 5px;
   display: inline;
 }
