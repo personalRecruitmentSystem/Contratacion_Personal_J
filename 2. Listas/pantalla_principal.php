@@ -35,7 +35,7 @@ $resultado = $con->query($sql);
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Lista de Postulantes</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../3. Lista Nomina de Sueldos/Lista.php'">Nómina de Sueldos</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../4. Lista de Vacantes/vacantes.php'">Lista de Vacantes</div>
-        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Opción 4</div>
+        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../5. Lista personal asignado cargo/personal_asignado_cargo.php'">Asignar Sub-Cargos</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Opción 5</div>
       </div>
     </div>

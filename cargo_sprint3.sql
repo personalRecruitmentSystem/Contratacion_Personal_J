@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-03-2024 a las 02:20:28
+-- Tiempo de generación: 10-03-2024 a las 21:53:06
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `cargo`
+-- Base de datos: `cargo_armando`
 --
 
 -- --------------------------------------------------------
@@ -93,8 +93,8 @@ CREATE TABLE `detalle_postulacion` (
 
 INSERT INTO `detalle_postulacion` (`ID_Cargo`, `ID_Postulante`, `Fecha_de_Postulacion`, `PDF_Postulacion`, `Estado`) VALUES
 (1, 1, '2023-11-08', 'por definir..................................!!!', 'Pendiente'),
-(2, 1, '2023-11-08', 'por definir..................................!!!', 'Pendiente'),
-(3, 2, '2024-01-12', 'por definir..................................!!!', 'Pendiente'),
+(2, 1, '2023-11-08', 'por definir..................................!!!', 'Aceptado'),
+(3, 2, '2024-01-12', 'por definir..................................!!!', 'Aceptado'),
 (4, 3, '2024-03-05', 'por definir..................................!!!', 'Pendiente');
 
 -- --------------------------------------------------------
@@ -118,17 +118,21 @@ CREATE TABLE `empleado` (
   `Lvl_De_Formacion` varchar(40) NOT NULL,
   `Tiempo_de_Contrato` varchar(40) NOT NULL,
   `ID_Cargo` int(11) NOT NULL,
-  `ID_convocatoria` int(11) NOT NULL
+  `ID_convocatoria` int(11) NOT NULL,
+  `fk_SubCargoID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `empleado`
 --
 
-INSERT INTO `empleado` (`ID_Empleado`, `Nombres`, `Apellido_Paterno`, `Apellido_Materno`, `fch_Nacimiento`, `Direccion`, `Genero`, `numero_Telefono`, `Correo_Electronico`, `fch_de_Contratacion`, `Nro_Seguro_Social`, `Lvl_De_Formacion`, `Tiempo_de_Contrato`, `ID_Cargo`, `ID_convocatoria`) VALUES
-(1, 'Juan', 'Perez', 'Garcia', '2014-03-10', 'Calle 123', 'Masculino', 5896134, 'juan.perez@gmail.com', '2024-03-01', '5484-98', 'Licenciadom en ingenieria de sistemas', 'Indefinido', 1, 1),
-(2, 'Maria', 'Ganzales', 'Rodrigues', '2004-03-09', 'Avenida Principal 456', 'Femenino', 986335, 'maria.gonzales@gmail.com', '2024-03-01', '987-632-65', 'licenciado en administracion de empresas', 'Indefinido', 3, 4),
-(3, 'Carlos', 'Martinez', 'Lopez', '2004-03-25', 'Calle Libertad 987', 'Masculino', 9862531, 'carlos.mart@gmail.com', '2024-03-15', '987-632-68', 'Licenciadom en ingenieria de sistemas', 'Indefinido', 4, 1);
+INSERT INTO `empleado` (`ID_Empleado`, `Nombres`, `Apellido_Paterno`, `Apellido_Materno`, `fch_Nacimiento`, `Direccion`, `Genero`, `numero_Telefono`, `Correo_Electronico`, `fch_de_Contratacion`, `Nro_Seguro_Social`, `Lvl_De_Formacion`, `Tiempo_de_Contrato`, `ID_Cargo`, `ID_convocatoria`, `fk_SubCargoID`) VALUES
+(1, 'Juan', 'Perez', 'Garcia', '2014-03-10', 'Calle 123', 'Masculino', 5896134, 'juan.perez@gmail.com', '2024-03-01', '5484-98', 'Licenciadom en ingenieria de sistemas', 'Indefinido', 1, 1, 4),
+(2, 'Maria', 'Ganzales', 'Rodrigues', '2004-03-09', 'Avenida Principal 456', 'Femenino', 986335, 'maria.gonzales@gmail.com', '2024-03-01', '987-632-65', 'licenciado en administracion de empresas', 'Indefinido', 3, 4, 3),
+(3, 'Carlos', 'Martinez', 'Lopez', '2004-03-25', 'Calle Libertad 987', 'Masculino', 9862531, 'carlos.mart@gmail.com', '2024-03-15', '987-632-68', 'Licenciadom en ingenieria de sistemas', 'Indefinido', 4, 1, 1),
+(4, 'Ana', 'López', 'Sánchez', '1990-05-15', 'Calle 456, Colonia Centro', 'Femenino', 987654321, 'ana.lopez@example.com', '2023-09-12', '123-45-6789', 'Licenciatura en Contaduría Pública', 'Indefinido', 2, 3, 10),
+(5, 'Luis', 'Rodríguez', 'Pérez', '1985-11-20', 'Avenida Principal 789', 'Masculino', 123456789, 'luis.rodriguez@example.com', '2022-03-12', '987-65-4321', 'Ingeniería Industrial', 'Indefinido', 2, 2, 11),
+(6, 'Patricia', 'García', 'Pérez', '1993-09-25', 'Calle del Bosque 123', 'Femenino', 987123456, 'patricia.garcia@example.com', '2022-09-16', '456-78-9123', 'Maestría en Administración de Empresas', 'Indefinido', 3, 3, 5);
 
 -- --------------------------------------------------------
 
@@ -215,12 +219,12 @@ CREATE TABLE `postulante` (
   `Apellido_Materno` varchar(40) NOT NULL,
   `Foto` varchar(100) NOT NULL,
   `Tipo_Documento` varchar(40) NOT NULL,
-  `Nro_Documento` int(20) NOT NULL,
+  `Nro_Documento` int(11) NOT NULL,
   `Fecha_Nacimiento` date DEFAULT NULL,
   `Sexo` varchar(15) NOT NULL,
   `Direccion` varchar(40) NOT NULL,
   `Correo` varchar(40) NOT NULL,
-  `Celular_Telefono` int(15) NOT NULL
+  `Celular_Telefono` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -262,7 +266,42 @@ CREATE TABLE `registro_de_trabajo` (
 INSERT INTO `registro_de_trabajo` (`ID_RegistroTrabajo`, `Dias_No_Trabajados`, `Dias_Trabajados`, `Dias_Feriado`, `Dias_Vacaciones`, `ID_Empleado`) VALUES
 (1, 2, 22, 1, 0, 3),
 (2, 0, 20, 2, 0, 2),
-(3, 3, 18, 0, 1, 1);
+(3, 3, 18, 0, 1, 1),
+(4, 3, 24, 2, 1, 4),
+(5, 1, 28, 1, 1, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sub_cargo`
+--
+
+CREATE TABLE `sub_cargo` (
+  `ID_Sub_Cargo` int(11) NOT NULL,
+  `Nombre` varchar(30) NOT NULL,
+  `ID_Cargo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `sub_cargo`
+--
+
+INSERT INTO `sub_cargo` (`ID_Sub_Cargo`, `Nombre`, `ID_Cargo`) VALUES
+(1, 'FrontEnd', 1),
+(2, 'BackEnd', 1),
+(3, 'Finanzas', 3),
+(4, 'Analista de Riesgos', 4),
+(5, 'Analista de Datos', 4),
+(6, 'FullStack', 1),
+(7, 'Gerente de Ventas', 2),
+(8, 'Gerente de Marketing', 2),
+(9, 'Desarrolo de App Web', 1),
+(10, 'Gerente Financiero', 2),
+(11, 'Gerente de Calidad', 2),
+(12, 'Logística', 3),
+(13, 'Servicio al Cliente', 3),
+(14, 'Analista de Negocios', 4),
+(15, 'Soporte Tecnico', 4);
 
 -- --------------------------------------------------------
 
@@ -324,7 +363,8 @@ ALTER TABLE `detalle_postulacion`
 ALTER TABLE `empleado`
   ADD PRIMARY KEY (`ID_Empleado`),
   ADD KEY `ID_Cargo` (`ID_Cargo`),
-  ADD KEY `ID_convocatoria` (`ID_convocatoria`);
+  ADD KEY `ID_convocatoria` (`ID_convocatoria`),
+  ADD KEY `fk_SubCargoID` (`fk_SubCargoID`);
 
 --
 -- Indices de la tabla `experiencia`
@@ -355,6 +395,13 @@ ALTER TABLE `registro_de_trabajo`
   ADD KEY `ID_Empleado_2` (`ID_Empleado`);
 
 --
+-- Indices de la tabla `sub_cargo`
+--
+ALTER TABLE `sub_cargo`
+  ADD PRIMARY KEY (`ID_Sub_Cargo`),
+  ADD KEY `ID_Cargo` (`ID_Cargo`);
+
+--
 -- Indices de la tabla `uinion`
 --
 ALTER TABLE `uinion`
@@ -382,7 +429,7 @@ ALTER TABLE `convocatoria`
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `ID_Empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `ID_Empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT de la tabla `experiencia`
@@ -406,7 +453,13 @@ ALTER TABLE `postulante`
 -- AUTO_INCREMENT de la tabla `registro_de_trabajo`
 --
 ALTER TABLE `registro_de_trabajo`
-  MODIFY `ID_RegistroTrabajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_RegistroTrabajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `sub_cargo`
+--
+ALTER TABLE `sub_cargo`
+  MODIFY `ID_Sub_Cargo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
@@ -424,7 +477,8 @@ ALTER TABLE `detalle_postulacion`
 --
 ALTER TABLE `empleado`
   ADD CONSTRAINT `Empleado_ibfk_1` FOREIGN KEY (`ID_Cargo`) REFERENCES `cargo` (`ID_Cargo`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `Empleado_ibfk_2` FOREIGN KEY (`ID_convocatoria`) REFERENCES `convocatoria` (`ID_convocatoria`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `Empleado_ibfk_2` FOREIGN KEY (`ID_convocatoria`) REFERENCES `convocatoria` (`ID_convocatoria`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_SubCargoID` FOREIGN KEY (`fk_SubCargoID`) REFERENCES `sub_cargo` (`ID_Sub_Cargo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `experiencia`
@@ -443,6 +497,12 @@ ALTER TABLE `formacion`
 --
 ALTER TABLE `registro_de_trabajo`
   ADD CONSTRAINT `Registro_De_Trabajo_ibfk_1` FOREIGN KEY (`ID_Empleado`) REFERENCES `empleado` (`ID_Empleado`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `sub_cargo`
+--
+ALTER TABLE `sub_cargo`
+  ADD CONSTRAINT `Sub_Cargo_ibfk_1` FOREIGN KEY (`ID_Cargo`) REFERENCES `cargo` (`ID_Cargo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `uinion`
