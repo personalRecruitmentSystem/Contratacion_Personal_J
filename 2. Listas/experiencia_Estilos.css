@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.todo{
+
+}
+
+/* ----------------------------------------------- */
+
+.titulo{
+    padding: 60px;
+    width: auto;
+    height: 100px;
+    border-bottom: 3px solid #bb3ef6;
+    background-color: #9180FF;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+    .titulo__Titulo{
+        font-size: 50px;
+        text-decoration: underline;
+    }
+    .titulo__Volver{
+        width: 120px;
+        height: 60px;
+        /* border: 2px solid skyblue; */
+        margin-left: auto;
+        background-color: rgba(142, 104, 216, 1);
+        color: white;
+        font-size: 30px;
+        padding-left: 9px;
+        line-height: 60px;
+        text-decoration: underline;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #3f0d56;
+    }
+
+.datos{
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid #00000062;;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+    .datos__Informacion{
+        height: 100%;
+        width: 100%;
+        /* border: 2px solid purple; */
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        gap: 2px;
+    }
+        .datos__Informacion__Fila{
+            height: 100%;
+            width: 100%;
+            padding: 3px;
+            border-bottom: 2px solid #00000062;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+        }
+            .datos__Informacion__Fila__Base{
+                height: 100%;
+                min-width: 150px;
+                width: auto;
+                padding: 10px;
+                background-color: #f5e4fd;
+                border: 1px solid #bb3ef6;
+                color: black;
+                font-size: 20px;
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+            }
+    .datos__Foto{
+        height: 100%;
+        width: 205px;
+        /* background-color: black; */
+        border: 1px solid #00000080;
+        display: flex;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        overflow: hidden; /* Evita que las imágenes desborden el contenedor */
+    }
+    .datos__Foto img {
+        width: auto; /* Ajusta el ancho de la imagen para que llene el contenedor */;
+        height: 100%; /* Mantiene la altura proporcional a la anchura */
+    }
+    
+
+
+.experiencia{
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    border: 2px solid #00000062;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+}
+    .experiencia__Titulo{
+        width: 100%;
+        height: auto;
+        /* border: 2px solid #3f0d56; */
+        background-color: #9180FF;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        border-right: 2px solid #00000080;
+    }
+        .experiencia__Titulo__Base{
+            width: 100%;
+            height: 100%;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            font-size: 20px;
+            border: 2px solid #00000080;
+            border-right: 0px;
+        }
+    .experiencia__Informacion{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        border-right: 2px solid #00000080;
+    }
+        .experiencia__Informacion__Base{
+            width: 100%;
+            height: auto;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            font-size: 20px;
+            border: 2px solid #00000053;
+            border-right: 0px;
+            border-top: 0px;
+        }
+
+        
+
+.cambio1{
+    font-size: 30px;
+    margin-left: 75px;
+    margin-top: 30px;
+}
+.cambio2{
+    width: 400px;
+}
+.cambio3{
+    width: 600px;
+}

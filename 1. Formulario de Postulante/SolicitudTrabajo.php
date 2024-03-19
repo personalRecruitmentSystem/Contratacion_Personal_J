@@ -138,7 +138,7 @@ switch ($conv) {
                 <div class="mitadDer__Experiencia__Titulo">Experiencia</div>
                 <div class="mitadDer__Experiencia__Info">
                     <div class="cambio8">
-                        <div class="mostraVentanaEmergente" id="btnAgregarExperiencia" onclick="mostrarVentanaEmergenteExperiencia()">Agregar Formación</div>
+                        <div class="mostraVentanaEmergente" id="btnAgregarExperiencia" onclick="mostrarVentanaEmergenteExperiencia()">Agrega Experiencia</div>
                         <div class="mostraVentanaEmergente" id="btnLimpiarExperiencia" onclick="limpiarVentanaEmergenteExperiencia()">Limpiar</div>
                     </div>
                     <div class="mitadDer__Experiencia__Info__ListaDinamica" id="listaDinamicaExperiencia">
