@@ -1,5 +1,5 @@
 <?php 
-$con =new mysqli("localhost", "root", "","cargo_sprint3");
+$con =new mysqli("localhost", "root", "","cargo_sprint_4");
 if ($con->connect_error)
  die ("conexion fallida".$con->connect_error);
 

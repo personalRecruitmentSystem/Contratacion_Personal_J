@@ -1,7 +1,7 @@
 <?php
 include("../conexion.php");
 
-$ID_Postulante = 1; //Pronto se recibirá este ID por un POST
+$ID_Postulante = isset($_GET['enviar']) ? $_GET['enviar'] : null;
 // INFORMACIÓN PERSONAL
 // Unir las tablas postulante y detalle_postulacion de acuerdo al ID_Postulante
 
@@ -75,7 +75,7 @@ $resultado_experiencia = $con->query($sql_experiencia);
     <div class="todo">
         <div class="titulo">
             <div class="titulo__Titulo">Experiencia</div>
-            <div class="titulo__Volver"  onclick="window.location.href='pantalla_principal.php'">< Volver</div>
+            <div class="titulo__Volver"  onclick="window.location.href='../6.Programar y coordinar/listado_entrevista.php'">< Volver</div>
         </div>
         <div class="cambio1">Informacion Personal</div>
         <?php

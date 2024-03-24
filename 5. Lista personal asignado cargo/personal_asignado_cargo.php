@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../3. Lista Nomina de Sueldos/Lista.php'">Nómina de Sueldos</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../4. Lista de Vacantes/vacantes.php'">Lista de Vacantes</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Asignar Sub-Cargos</div>
-        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Opción 5</div>
+        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../6.Programar y coordinar/listado_entrevista.php'">Lista de Entrevista</div>
     </div>
   </div>
   <div class="pantallaPrincipal__ContDer"  id="generarPDF_deEsto">

@@ -5,10 +5,10 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-    <title>Lista Vacantes</title>
+    <title>Lista Entrevista</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A300%2C700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C700"/>
-  <link rel="stylesheet" href="pantalla_vacante_Estilos.css"/>
+  <link rel="stylesheet" href="pantalla_entrevista_Estilos.css"/>
 </head>
 <body>
 <div class="pantallaPrincipal">
@@ -20,14 +20,14 @@
     <div class="pantallaPrincipal__MenuIzq__Opciones">
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../2. Listas/pantalla_principal.php'">Lista de Postulantes</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../3. Lista Nomina de Sueldos/Lista.php'">Nómina de Sueldos</div>
-        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Lista de Vacantes</div>
+        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../4. Lista de Vacantes/vacantes.php'">Lista de Vacantes</div>
         <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../5. Lista personal asignado cargo/personal_asignado_cargo.php'">Asignar Sub-Cargos</div>
-        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion" onclick="window.location.href='../6.Programar y coordinar/listado_entrevista.php'">Lista de Entrevista</div>
+        <div class="pantallaPrincipal__MenuIzq__Opciones__Opcion">Lista de Entrevista</div>
     </div>
   </div>
   <div class="pantallaPrincipal__ContDer"  id="generarPDF_deEsto">
     <div class="pantallaPrincipal__ContDer__Titulo">
-      <div class="pantallaPrincipal__ContDer__Titulo__Texto">Lista de Vacantes </div>
+      <div class="pantallaPrincipal__ContDer__Titulo__Texto">Lista de entrevista </div>
       <div class="pantallaPrincipal__ContDer__Titulo__Volver" onclick="window.location.href='../PáginaPrincipal.php'"><  Volver</div>
     </div>
     <div class="pantallaPrincipal__ContDer__Listas">
@@ -37,39 +37,76 @@
           <button class="pantallaPrincipal__ContDer__Listas__BusqBotones__BotonLimpiar" id="limpiarBusqueda">Limpiar</button>
     </div>
   </div>
+  
   <div class="pantallaPrincipal__ContDer__Listas__Lista">
     <table>
       <thead>
         <tr>
-          <th>Nombre del cargo</th>
-          <th>Numero de vacantes </th>
+          <th>Nombre Completo</th>
+          <th>Cargo </th>
+          
+          <th>Fecha Postulacion </th>
+          <th>Estado </th>
+          <th>Experiencia</th>
+          <th>Programacion Entrevista </th>
           </tr>
       </thead>
       <tbody>
-        <?php
+      <?php
           include("../conexion.php");
-          include("consultavacante.php");
+          include("consulta_entrevista.php");
           if($resultado->num_rows > 0){
             while($row = $resultado->fetch_assoc()){
         ?>
         <tr>
         <?php
-          echo "<th class='tabla__Contenido'>".$row["Nombre"]."</th>";
-          echo "<th class='tabla__Contenido'>".$row["cargosvacantes"]."</th>";
+              echo "<th class='tabla__Contenido'>".$row["Nombre_Completo"]."</th>";
+              echo "<th class='tabla__Contenido'>".$row["Cargo"]."</th>";
+              echo "<th class='tabla__Contenido'>".$row["Fecha_de_Postulacion"]."</th>";
+              echo "<th class='tabla__Contenido'>".$row["Estado"]."</th>";
+              //echo "<th class='tabla__Contenido'>".$row["ID_Postulante"]."</th>";
+              // echo "<th class='tabla__Contenido'>".$row["ID_Postulante"]."</th>";
+              echo "
+    <th class='tabla__Contenido'>
+        <div class='cambio9' onclick=\"window.location.href='../2. Listas/experiencia.php?enviar=".$row["ID_Postulante"]."'\">Experiencia</div>
+    </th>";
+
+
+            //  if(array_intersect_assoc($row['Estado'],'Aceptado') || array_intersect_assoc($row['Estado'],'Revisado')){
+             if(($row["Estado"]=='Aceptado') ||($row["Estado"]=='Revisado')){
+            
+               echo "
+               <th class='tabla__Contenido'>
+                  <button  class='cambio2' type='submit' >
+                    <a class='entrevista'  href='programar_entrevista.php?id_postulante=".$row['ID_Postulante'] . "'>Programar Entrevista</a>
+                  </button>
+               </th>";
+              
+              
+              }else{
+                echo "<th class='tabla__Contenido'>No cumple requisitos para la entrevista</th>";
+               
+
+            }
+
+        
+
+        
+          echo "</tr>";
         ?>
         </tr>
         <?php
           }
         }
         ?>
+      <button type='submit'></button>
       </tbody>
     </table>
   </div>
   <!--generar pdf-->
-  <div  class="pantallaPrincipal__ContDer__Titulo__Volver cambio1" id="crearPDF">
+  <!-- <div  class="pantallaPrincipal__ContDer__Titulo__Volver cambio1" id="crearPDF">
     Generar Reporte PDF
-    <!-- <a href="" class="btn_pdf" ><i class="pantallaPrincipal__ContDer__Titulo__Volver"></i></a> -->
-  </div>
+  </div> -->
 </div>
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
 <!-- <script src="html2pdf.bundle.min.js"></script> -->
@@ -98,7 +135,7 @@
 
 // -------------------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', function() {
-    ctrl_listavacante.mostrarListaVacante(); 
+    ctrl_listavacante.mostrarListaEntrevista(); 
   });
 
   document.addEventListener('DOMContentLoaded', function() {
