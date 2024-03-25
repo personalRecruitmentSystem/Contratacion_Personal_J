@@ -80,6 +80,83 @@ body, html {
   position: relative;
 }
 
+.detalle_sup_login{
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.linea {
+  width:200px;
+  height: 3px;
+  background-color: rgb(191, 38, 238);
+  position: absolute;
+
+}
+
+.linea-1 {
+  top: 20;
+  left: 40;
+}
+.linea-2{
+  top: 20;
+  left: -220;
+
+}
+.linea-3{
+  top: 10;
+  left: -220;
+
+}
+.linea-4{
+  top: 10;
+  left: 40;
+  
+}
+
+
+
+.circulo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(138, 56, 216);
+  position: relative;
+}
+
+.login {
+  border: 1px solid #c086cc;
+  background-color: rgba(209, 142, 200, 0.8);
+  border-radius: 2vw;
+  padding: 50px;
+  width: 400px;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  border-radius: 2vw;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #868181;
+}
+
+.login input[type="submit"] {
+  position: relative;
+  left: 60%;
+  background-color: rgba(142, 104, 216, 1);
+  border-radius: 2vw;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
 .img__fondo2 {
   position: absolute;
   top: 0;

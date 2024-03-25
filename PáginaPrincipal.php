@@ -62,7 +62,26 @@
     <div class="mitadDer" id="div_mitadDer">
       <img src="Imagenes\ezze-design-image-bg.png" alt="" class="img__fondo2" />
       <div class="mitadDer__Opciones" id="boton_postulante">Postularse</div>
-      <div class="mitadDer__Opciones" id="boton_lista" onclick="window.location.href='2. Listas/pantalla_principal.php'">Ver Listas</div>
+
+      <div class="detalle_sup_login">
+      <div class="linea linea-1"></div>
+      <div class="linea linea-2"></div>
+      <div class="linea linea-3"></div>
+      <div class="linea linea-4"></div>
+       <div class="circulo"></div>
+      </div>
+      <div class="login"  >
+        <form action="login.php" method="post">
+          <label>Usuario</label>
+          <input type="text"  name="usuario"><br>
+          <label >contraseña</label>
+          <input type="password" name="contraseña"><br>
+          <input type="submit"  value="ingresar" >
+        </form>
+      </div>
+
+
+      <!-- <div class="mitadDer__Opciones" id="boton_lista" onclick="window.location.href='2. Listas/pantalla_principal.php'">Ver Listas</div> -->
     </div>
   </div>
 

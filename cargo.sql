@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 24-03-2024 a las 02:34:32
+-- Servidor: localhost
+-- Tiempo de generación: 25-03-2024 a las 07:45:16
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `cargo_sprint_4`
+-- Base de datos: `cargo`
 --
 
 -- --------------------------------------------------------
@@ -133,34 +133,6 @@ INSERT INTO `empleado` (`ID_Empleado`, `Nombres`, `Apellido_Paterno`, `Apellido_
 (4, 'Ana', 'López', 'Sánchez', '1990-05-15', 'Calle 456, Colonia Centro', 'Femenino', 987654321, 'ana.lopez@example.com', '2023-09-12', '123-45-6789', 'Licenciatura en Contaduría Pública', 'Indefinido', 2, 3, 10),
 (5, 'Luis', 'Rodríguez', 'Pérez', '1985-11-20', 'Avenida Principal 789', 'Masculino', 123456789, 'luis.rodriguez@example.com', '2022-03-12', '987-65-4321', 'Ingeniería Industrial', 'Indefinido', 2, 2, 11),
 (6, 'Patricia', 'García', 'Pérez', '1993-09-25', 'Calle del Bosque 123', 'Femenino', 987123456, 'patricia.garcia@example.com', '2022-09-16', '456-78-9123', 'Maestría en Administración de Empresas', 'Indefinido', 3, 3, 5);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `entrevista`
---
-
-CREATE TABLE `entrevista` (
-  `ID_Entrevista` int(11) NOT NULL,
-  `Fecha` date DEFAULT NULL,
-  `Hora` time DEFAULT NULL,
-  `ID_Postulante` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `entrevista`
---
-
-INSERT INTO `entrevista` (`ID_Entrevista`, `Fecha`, `Hora`, `ID_Postulante`) VALUES
-(1, '2024-03-15', '10:00:00', 1),
-(2, '2024-03-16', '11:30:00', 2),
-(3, '2024-03-17', '09:45:00', 3),
-(4, '2024-03-18', '14:00:00', 11),
-(5, '2024-03-18', '15:30:00', 14),
-(6, '2024-03-12', '15:38:22', 12),
-(7, '2024-03-18', '10:38:22', 13),
-(8, '2018-07-22', '15:00:00', 1),
-(9, '2018-07-22', '16:43:00', 1);
 
 -- --------------------------------------------------------
 
@@ -361,6 +333,27 @@ INSERT INTO `uinion` (`ID_convocatoria`, `ID_Cargo`, `Nro_Vacantes`, `estado`, `
 (4, 3, 7, 'Abierta', '...'),
 (4, 4, 6, 'Abierta', '...');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Usuarios`
+--
+
+CREATE TABLE `Usuarios` (
+  `id_Usuario` int(11) NOT NULL,
+  `nombre` varchar(20) NOT NULL,
+  `contraseña` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `Usuarios`
+--
+
+INSERT INTO `Usuarios` (`id_Usuario`, `nombre`, `contraseña`) VALUES
+(1, 'armando', 12345),
+(2, 'jason', 1234),
+(3, 'maria', 123);
+
 --
 -- Índices para tablas volcadas
 --
@@ -393,13 +386,6 @@ ALTER TABLE `empleado`
   ADD KEY `ID_Cargo` (`ID_Cargo`),
   ADD KEY `ID_convocatoria` (`ID_convocatoria`),
   ADD KEY `fk_SubCargoID` (`fk_SubCargoID`);
-
---
--- Indices de la tabla `entrevista`
---
-ALTER TABLE `entrevista`
-  ADD PRIMARY KEY (`ID_Entrevista`),
-  ADD KEY `ID_Postulante` (`ID_Postulante`);
 
 --
 -- Indices de la tabla `experiencia`
@@ -445,6 +431,12 @@ ALTER TABLE `uinion`
   ADD KEY `ID_convocatoria` (`ID_convocatoria`);
 
 --
+-- Indices de la tabla `Usuarios`
+--
+ALTER TABLE `Usuarios`
+  ADD PRIMARY KEY (`id_Usuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -465,12 +457,6 @@ ALTER TABLE `convocatoria`
 --
 ALTER TABLE `empleado`
   MODIFY `ID_Empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
-
---
--- AUTO_INCREMENT de la tabla `entrevista`
---
-ALTER TABLE `entrevista`
-  MODIFY `ID_Entrevista` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `experiencia`
@@ -503,6 +489,12 @@ ALTER TABLE `sub_cargo`
   MODIFY `ID_Sub_Cargo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
+-- AUTO_INCREMENT de la tabla `Usuarios`
+--
+ALTER TABLE `Usuarios`
+  MODIFY `id_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -520,12 +512,6 @@ ALTER TABLE `empleado`
   ADD CONSTRAINT `Empleado_ibfk_1` FOREIGN KEY (`ID_Cargo`) REFERENCES `cargo` (`ID_Cargo`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `Empleado_ibfk_2` FOREIGN KEY (`ID_convocatoria`) REFERENCES `convocatoria` (`ID_convocatoria`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_SubCargoID` FOREIGN KEY (`fk_SubCargoID`) REFERENCES `sub_cargo` (`ID_Sub_Cargo`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `entrevista`
---
-ALTER TABLE `entrevista`
-  ADD CONSTRAINT `Entrevista_ibfk_1` FOREIGN KEY (`ID_Postulante`) REFERENCES `postulante` (`ID_Postulante`);
 
 --
 -- Filtros para la tabla `experiencia`
