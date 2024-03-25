@@ -44,7 +44,7 @@
         <tr>
           <th>Nombre Completo</th>
           <th>Cargo </th>
-          
+      
           <th>Fecha Postulacion </th>
           <th>Estado </th>
           <th>Experiencia</th>
